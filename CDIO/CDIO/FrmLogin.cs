@@ -21,5 +21,18 @@ namespace CDIO
         {
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(DialogResult.No == MessageBox.Show("Do you want to exit?","Warning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning))
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
