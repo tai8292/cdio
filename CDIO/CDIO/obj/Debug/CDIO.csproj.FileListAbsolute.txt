@@ -1,0 +1,9 @@
+D:\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
+D:\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
+D:\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.Cache
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.FrmLogin.resources
