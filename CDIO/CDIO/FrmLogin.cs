@@ -34,5 +34,13 @@ namespace CDIO
                 e.Cancel = true;
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            GUI.FrmMain f = new GUI.FrmMain();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

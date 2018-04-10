@@ -7,3 +7,6 @@ D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.Cache
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csprojResolveAssemblyReference.cache
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmOrder.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMain.resources
