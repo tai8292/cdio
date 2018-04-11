@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace CDIO.DA
 {
-    class DA_Menu
+    class DA_Kind
     {
         DataProvider dp = new DataProvider();
 
-        public DataTable getDataTableMenu()
+        public DataTable getDataTableKind()
         {
-            string sql = "select * from DISH";
+            string sql = "select * from KIND";
             return dp.getDataTable(sql);
         }
     }

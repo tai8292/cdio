@@ -30,12 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kind = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -61,6 +55,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddDish = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kind = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pictrure = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,50 +90,13 @@
             this.kind,
             this.number,
             this.price,
-            this.Image});
+            this.Pictrure});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(720, 560);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 50;
-            // 
-            // dishName
-            // 
-            this.dishName.HeaderText = "Dish name";
-            this.dishName.Name = "dishName";
-            this.dishName.ReadOnly = true;
-            this.dishName.Width = 150;
-            // 
-            // kind
-            // 
-            this.kind.HeaderText = "Kind";
-            this.kind.Name = "kind";
-            this.kind.ReadOnly = true;
-            // 
-            // number
-            // 
-            this.number.HeaderText = "Number";
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // Image
-            // 
-            this.Image.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Image.HeaderText = "Imange";
-            this.Image.Name = "Image";
-            this.Image.ReadOnly = true;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -197,6 +160,8 @@
             this.openChoose.TabIndex = 5;
             this.openChoose.Text = "Choose";
             this.openChoose.UseVisualStyleBackColor = true;
+            this.openChoose.Visible = false;
+            this.openChoose.Click += new System.EventHandler(this.openChoose_Click);
             // 
             // picture
             // 
@@ -367,6 +332,51 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "DishID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // dishName
+            // 
+            this.dishName.DataPropertyName = "DishName";
+            this.dishName.HeaderText = "Dish name";
+            this.dishName.Name = "dishName";
+            this.dishName.ReadOnly = true;
+            this.dishName.Width = 150;
+            // 
+            // kind
+            // 
+            this.kind.DataPropertyName = "KindID";
+            this.kind.HeaderText = "Kind";
+            this.kind.Name = "kind";
+            this.kind.ReadOnly = true;
+            // 
+            // number
+            // 
+            this.number.DataPropertyName = "Number";
+            this.number.HeaderText = "Number";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "Price";
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // Pictrure
+            // 
+            this.Pictrure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Pictrure.DataPropertyName = "Picture";
+            this.Pictrure.HeaderText = "Image";
+            this.Pictrure.Name = "Pictrure";
+            this.Pictrure.ReadOnly = true;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,12 +411,6 @@
 
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kind;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewImageColumn Image;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnSave;
@@ -432,5 +436,11 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnAddDish;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kind;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewImageColumn Pictrure;
     }
 }

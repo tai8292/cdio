@@ -21,12 +21,30 @@ namespace CDIO.GUI
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
+            menu.loadCombobox();
             menu.loadForm();
         }
 
         private void btnAddDish_Click(object sender, EventArgs e)
         {
-            menu.addDish();
+            openChoose.Visible = true;
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            menu.clickDataGrid(e.RowIndex);
+        }
+
+        private void openChoose_Click(object sender, EventArgs e)
+        {
+            this.openFileDialog1.ShowDialog();
+            this.picture.Image = Image.FromFile(this.openFileDialog1.FileName);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            menu.clickDataGrid(e.RowIndex);
         }
     }
 }

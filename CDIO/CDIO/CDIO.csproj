@@ -45,8 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\BL_Kind.cs" />
+    <Compile Include="BL\Commen.cs" />
     <Compile Include="BL\Menu.cs" />
     <Compile Include="DA\DataProvider.cs" />
+    <Compile Include="DA\DA_Kind.cs" />
     <Compile Include="DA\DA_Menu.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>

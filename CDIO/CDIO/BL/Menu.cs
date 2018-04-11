@@ -9,11 +9,13 @@ namespace CDIO.BL
     class Menu
     {
         DA.DA_Menu menu;
+        DA.DA_Kind kind;
         GUI.FrmMenu frmMenu;
         
         public Menu(GUI.FrmMenu f)
         {
             menu = new DA.DA_Menu();
+            kind = new DA.DA_Kind();
             frmMenu = f;
         }
 
@@ -22,11 +24,28 @@ namespace CDIO.BL
             frmMenu.dataGridView1.DataSource = menu.getDataTableMenu();
         }
 
+        public void loadCombobox()
+        {
+            frmMenu.txtKind.DataSource = kind.getDataTableKind();
+            frmMenu.txtKind.ValueMember = "KindID";
+            frmMenu.txtKind.DisplayMember = "KindName";
+        }
+
         public void addDish()
         {
     //        menu.addDish(frmMenu.txtID.Text,frmMenu.txtName.Text,
     //            frmMenu.txtKind.SelectedValue.ToString(),frmMenu.txtNumber.Text,
     //            frmMenu.txtPrice.Text,)
+        }
+
+        public void clickDataGrid(int index)
+        {
+            frmMenu.txtID.Text = frmMenu.dataGridView1.Rows[index].Cells[0].Value.ToString();
+            frmMenu.txtName.Text = frmMenu.dataGridView1.Rows[index].Cells[1].Value.ToString();
+            frmMenu.txtNumber.Text = frmMenu.dataGridView1.Rows[index].Cells[3].Value.ToString();
+            frmMenu.txtPrice.Text = frmMenu.dataGridView1.Rows[index].Cells[4].Value.ToString();
+
+            frmMenu.txtKind.SelectedValue = frmMenu.dataGridView1.Rows[index].Cells[2].Value;
         }
     }
 }
