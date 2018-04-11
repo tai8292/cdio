@@ -11,3 +11,4 @@ D:\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
 D:\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
 D:\cdio\CDIO\CDIO\obj\Debug\CDIO.FrmLogin.resources
 >>>>>>> acd7e8d3dcddefb7b40aca454d365d716a51d31f
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csprojResolveAssemblyReference.cache
