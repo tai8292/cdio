@@ -11,6 +11,7 @@ namespace CDIO.BL
         DA.DA_Menu menu;
         DA.DA_Kind kind;
         GUI.FrmMenu frmMenu;
+        Commen commen = new Commen();
         
         public Menu(GUI.FrmMenu f)
         {
@@ -44,8 +45,14 @@ namespace CDIO.BL
             frmMenu.txtName.Text = frmMenu.dataGridView1.Rows[index].Cells[1].Value.ToString();
             frmMenu.txtNumber.Text = frmMenu.dataGridView1.Rows[index].Cells[3].Value.ToString();
             frmMenu.txtPrice.Text = frmMenu.dataGridView1.Rows[index].Cells[4].Value.ToString();
-
             frmMenu.txtKind.SelectedValue = frmMenu.dataGridView1.Rows[index].Cells[2].Value;
+            frmMenu.picture.Image = commen.byteToImage((byte[])frmMenu.dataGridView1.Rows[index].Cells[5].Value);
         }
+
+        public void deleteDish()
+        {
+            menu.deleteDish(frmMenu.txtID.Text);
+        }
+
     }
 }

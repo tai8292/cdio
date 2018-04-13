@@ -27,8 +27,8 @@ namespace CDIO.GUI
 
         private void btnAddDish_Click(object sender, EventArgs e)
         {
-            openChoose.Visible = true;
-            
+            FrmMenuAddDish f = new FrmMenuAddDish();
+            f.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,15 +36,20 @@ namespace CDIO.GUI
             menu.clickDataGrid(e.RowIndex);
         }
 
-        private void openChoose_Click(object sender, EventArgs e)
-        {
-            this.openFileDialog1.ShowDialog();
-            this.picture.Image = Image.FromFile(this.openFileDialog1.FileName);
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             menu.clickDataGrid(e.RowIndex);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            menu.deleteDish();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            FrmEditDish f = new FrmEditDish(txtID.Text,txtName.Text,txtKind.SelectedValue.ToString(),txtNumber.Text,txtPrice.Text,picture.Image);
+            f.ShowDialog();
         }
     }
 }

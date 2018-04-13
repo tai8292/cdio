@@ -16,3 +16,5 @@ D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmCustomer.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmCustomerType.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmPosition.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmUser.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenuAddDish.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditDish.resources

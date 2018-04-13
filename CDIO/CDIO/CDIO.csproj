@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\BL_EditDish.cs" />
     <Compile Include="BL\BL_Kind.cs" />
     <Compile Include="BL\Commen.cs" />
     <Compile Include="BL\Menu.cs" />
@@ -69,6 +71,12 @@
     <Compile Include="GUI\FrmCustomerType.Designer.cs">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmEditDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmEditDish.Designer.cs">
+      <DependentUpon>FrmEditDish.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +94,12 @@
     </Compile>
     <Compile Include="GUI\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmMenuAddDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmMenuAddDish.Designer.cs">
+      <DependentUpon>FrmMenuAddDish.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmOrder.cs">
       <SubType>Form</SubType>
@@ -116,6 +130,9 @@
     <EmbeddedResource Include="GUI\FrmCustomerType.resx">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmEditDish.resx">
+      <DependentUpon>FrmEditDish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEmployee.resx">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmMenuAddDish.resx">
+      <DependentUpon>FrmMenuAddDish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmOrder.resx">
       <DependentUpon>FrmOrder.cs</DependentUpon>

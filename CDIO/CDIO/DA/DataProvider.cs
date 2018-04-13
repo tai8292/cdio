@@ -41,6 +41,16 @@ namespace CDIO.DA
             return ketqua;
         }
 
+        public int ExcuNonQuery(string sql,SqlParameter param)
+        {
+            Open();
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.Add(param);
+            int ketqua = comm.ExecuteNonQuery();
+            Closed();
+            return ketqua;
+        }
+
         public DataTable getDataTable(string sql)
         {
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);

@@ -32,10 +32,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.openChoose = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -54,7 +52,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddDish = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kind = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,7 +98,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
@@ -123,28 +119,20 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(147, 524);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 36);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(15, 524);
+            this.btnEdit.Location = new System.Drawing.Point(27, 524);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(89, 36);
-            this.btnEdit.TabIndex = 6;
+            this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.openChoose);
             this.panel8.Controls.Add(this.picture);
             this.panel8.Controls.Add(this.label6);
             this.panel8.Location = new System.Drawing.Point(3, 324);
@@ -152,24 +140,15 @@
             this.panel8.Size = new System.Drawing.Size(365, 194);
             this.panel8.TabIndex = 3;
             // 
-            // openChoose
-            // 
-            this.openChoose.Location = new System.Drawing.Point(12, 65);
-            this.openChoose.Name = "openChoose";
-            this.openChoose.Size = new System.Drawing.Size(89, 36);
-            this.openChoose.TabIndex = 5;
-            this.openChoose.Text = "Choose";
-            this.openChoose.UseVisualStyleBackColor = true;
-            this.openChoose.Visible = false;
-            this.openChoose.Click += new System.EventHandler(this.openChoose_Click);
-            // 
             // picture
             // 
             this.picture.Location = new System.Drawing.Point(126, 10);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(236, 181);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 4;
             this.picture.TabStop = false;
+            this.picture.WaitOnLoad = true;
             // 
             // label6
             // 
@@ -195,6 +174,7 @@
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(126, 10);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(232, 26);
             this.txtPrice.TabIndex = 2;
             // 
@@ -222,6 +202,7 @@
             this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Location = new System.Drawing.Point(126, 10);
             this.txtNumber.Name = "txtNumber";
+            this.txtNumber.ReadOnly = true;
             this.txtNumber.Size = new System.Drawing.Size(232, 26);
             this.txtNumber.TabIndex = 2;
             // 
@@ -246,6 +227,7 @@
             // 
             // txtKind
             // 
+            this.txtKind.Enabled = false;
             this.txtKind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKind.FormattingEnabled = true;
             this.txtKind.Location = new System.Drawing.Point(126, 7);
@@ -277,6 +259,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 2;
             // 
@@ -304,6 +287,7 @@
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(126, 10);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(232, 26);
             this.txtID.TabIndex = 2;
             // 
@@ -327,10 +311,6 @@
             this.btnAddDish.Text = "Add dish";
             this.btnAddDish.UseVisualStyleBackColor = true;
             this.btnAddDish.Click += new System.EventHandler(this.btnAddDish_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // id
             // 
@@ -374,6 +354,7 @@
             this.Pictrure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Pictrure.DataPropertyName = "Picture";
             this.Pictrure.HeaderText = "Image";
+            this.Pictrure.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Pictrure.Name = "Pictrure";
             this.Pictrure.ReadOnly = true;
             // 
@@ -413,10 +394,8 @@
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnDelete;
-        public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel8;
-        public System.Windows.Forms.Button openChoose;
         public System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
@@ -426,7 +405,6 @@
         public System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.ComboBox txtKind;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.TextBox txtName;
@@ -435,7 +413,7 @@
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnAddDish;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.ComboBox txtKind;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishName;
         private System.Windows.Forms.DataGridViewTextBoxColumn kind;
