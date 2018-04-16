@@ -25,7 +25,6 @@ namespace CDIO.DA
             SqlParameter param = new SqlParameter();
             param.ParameterName = "@HinhAnh";
             param.Value = v2;
-
             string sql = "insert into DISH values('10',N'" + text1 + "','" + v1 + "'," + text2 + "," + text3 + ",@HinhAnh)";
             return dp.ExcuNonQuery(sql,param);
         }
@@ -40,8 +39,7 @@ namespace CDIO.DA
         {
             SqlParameter param = new SqlParameter();
             param.ParameterName = "@HinhAnh";
-            param.Value = commen.ImageToByte(image);
-            
+            param.Value = commen.ImageToByte(image);   
             string sql = "update DISH set DishName=N'" + text2 + "',KindID='" + v + "',Number=" + text3 + ",Price=" + text4 + ",Picture= @HinhAnh where DishID like'"+text1+"'";
             dp.ExcuNonQuery(sql,param);
         }
