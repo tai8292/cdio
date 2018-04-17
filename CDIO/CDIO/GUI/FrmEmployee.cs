@@ -44,14 +44,9 @@ namespace CDIO.GUI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            employee.clickDataGrid(e.RowIndex);
+            if(e.RowIndex>=0 && e.RowIndex<this.dataGridView1.Rows.Count)
+                employee.clickDataGrid(e.RowIndex);
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            employee.clickDataGrid(e.RowIndex);
-        }
-
 
     }
 }

@@ -31,14 +31,12 @@ namespace CDIO.GUI
             f.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            menu.clickDataGrid(e.RowIndex);
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            menu.clickDataGrid(e.RowIndex);
+            if (e.RowIndex >= 0 && e.RowIndex < this.dataGridView1.Rows.Count)
+            {
+                menu.clickDataGrid(e.RowIndex);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

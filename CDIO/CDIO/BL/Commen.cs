@@ -23,5 +23,21 @@ namespace CDIO.BL
             img.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
             return ms.ToArray();
         }
+
+        //kiểm tra xem chuỗi có phải số không
+        public Boolean CheckIsNumber(String s)
+        {
+            for (int i = 0; i < s.Length; i++)
+                if (s[i] < '0' || s[i] > '9')
+                    return false;
+            return true;
+        }
+        //độ dài chuỗi hợp lệ không
+        public Boolean CheckLength(string s)
+        {
+            if (s.Length > 10)
+                return false;
+            return true;
+        }
     }
 }
