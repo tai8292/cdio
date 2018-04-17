@@ -31,8 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pickerBirthday = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -50,29 +55,16 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pickerBirthday = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,25 +78,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.name,
-            this.gender,
-            this.address,
-            this.phone,
-            this.birthday,
-            this.position});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(720, 560);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
@@ -117,32 +102,82 @@
             this.panel2.Size = new System.Drawing.Size(371, 563);
             this.panel2.TabIndex = 1;
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.cbPosition);
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Location = new System.Drawing.Point(3, 371);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(365, 41);
+            this.panel9.TabIndex = 4;
+            // 
+            // cbPosition
+            // 
+            this.cbPosition.Enabled = false;
+            this.cbPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(126, 7);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(232, 28);
+            this.cbPosition.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Position :";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pickerBirthday);
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Location = new System.Drawing.Point(3, 324);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(365, 41);
+            this.panel8.TabIndex = 4;
+            // 
+            // pickerBirthday
+            // 
+            this.pickerBirthday.Enabled = false;
+            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickerBirthday.Location = new System.Drawing.Point(126, 5);
+            this.pickerBirthday.Name = "pickerBirthday";
+            this.pickerBirthday.Size = new System.Drawing.Size(232, 26);
+            this.pickerBirthday.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(8, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Birthday :";
+            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(272, 524);
+            this.btnDelete.Location = new System.Drawing.Point(219, 509);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 36);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(147, 524);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 36);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(15, 524);
+            this.btnEdit.Location = new System.Drawing.Point(44, 509);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(89, 36);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel7
             // 
@@ -158,6 +193,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(126, 10);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
             // 
@@ -185,6 +221,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(126, 10);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
             // 
@@ -209,6 +246,7 @@
             // 
             // cbGender
             // 
+            this.cbGender.Enabled = false;
             this.cbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
@@ -243,6 +281,7 @@
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 2;
             // 
@@ -270,6 +309,7 @@
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(126, 10);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(232, 26);
             this.txtID.TabIndex = 2;
             // 
@@ -292,108 +332,7 @@
             this.btnAddEmployee.TabIndex = 0;
             this.btnAddEmployee.Text = "Add employee";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.pickerBirthday);
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Location = new System.Drawing.Point(3, 324);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(365, 41);
-            this.panel8.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Birthday :";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.cbPosition);
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(3, 371);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(365, 41);
-            this.panel9.TabIndex = 4;
-            // 
-            // cbPosition
-            // 
-            this.cbPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPosition.FormattingEnabled = true;
-            this.cbPosition.Location = new System.Drawing.Point(126, 7);
-            this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Size = new System.Drawing.Size(232, 28);
-            this.cbPosition.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Position :";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 50;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 140;
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 50;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
-            this.address.Width = 140;
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Phone";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // birthday
-            // 
-            this.birthday.HeaderText = "Birthday";
-            this.birthday.Name = "birthday";
-            this.birthday.ReadOnly = true;
-            // 
-            // position
-            // 
-            this.position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.position.HeaderText = "Position";
-            this.position.Name = "position";
-            this.position.ReadOnly = true;
-            // 
-            // pickerBirthday
-            // 
-            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickerBirthday.Location = new System.Drawing.Point(126, 5);
-            this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(232, 26);
-            this.pickerBirthday.TabIndex = 3;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // FrmEmployee
             // 
@@ -404,9 +343,14 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmEmployee";
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.FrmEmployee_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -417,10 +361,6 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -428,39 +368,31 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txtPhone;
+        public System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txtAddress;
+        public System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox cbGender;
+        public System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.ComboBox cbPosition;
+        public System.Windows.Forms.ComboBox cbPosition;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn position;
-        private System.Windows.Forms.DateTimePicker pickerBirthday;
+        public System.Windows.Forms.DateTimePicker pickerBirthday;
     }
 }
