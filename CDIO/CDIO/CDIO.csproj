@@ -47,7 +47,11 @@
   <ItemGroup>
     <Compile Include="BL\BL_AddDish.cs" />
 <<<<<<< HEAD
+    <Compile Include="BL\BL_AddUser.cs" />
+=======
+<<<<<<< HEAD
     <Compile Include="BL\BL_AddPosition.cs" />
+>>>>>>> master
     <Compile Include="BL\BL_EditDish.cs" />
     <Compile Include="BL\BL_EditPosition.cs" />
 =======
@@ -60,17 +64,29 @@
     <Compile Include="BL\Commen.cs" />
     <Compile Include="BL\Employee.cs" />
     <Compile Include="BL\Menu.cs" />
+    <Compile Include="BL\User.cs" />
     <Compile Include="DA\DataProvider.cs" />
     <Compile Include="DA\DA_Employee.cs" />
     <Compile Include="DA\DA_Kind.cs" />
     <Compile Include="DA\DA_Menu.cs" />
+<<<<<<< HEAD
+    <Compile Include="DA\DA_User.cs" />
+=======
     <Compile Include="DA\DA_Position.cs" />
+>>>>>>> master
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI\FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+=======
 <<<<<<< HEAD
     <Compile Include="GUI\FrmAddPosition.cs">
       <SubType>Form</SubType>
@@ -83,6 +99,7 @@
     </Compile>
     <Compile Include="GUI\FrmAddEmployee.Designer.cs">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+>>>>>>> master
 >>>>>>> master
     </Compile>
     <Compile Include="GUI\FrmCustomer.cs">
@@ -165,11 +182,16 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< HEAD
+    <EmbeddedResource Include="GUI\FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
+=======
+<<<<<<< HEAD
     <EmbeddedResource Include="GUI\FrmAddPosition.resx">
       <DependentUpon>FrmAddPosition.cs</DependentUpon>
 =======
     <EmbeddedResource Include="GUI\FrmAddEmployee.resx">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+>>>>>>> master
 >>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
