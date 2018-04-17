@@ -46,18 +46,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\BL_AddUser.cs" />
     <Compile Include="BL\BL_EditDish.cs" />
     <Compile Include="BL\BL_Kind.cs" />
     <Compile Include="BL\Commen.cs" />
     <Compile Include="BL\Menu.cs" />
+    <Compile Include="BL\User.cs" />
     <Compile Include="DA\DataProvider.cs" />
     <Compile Include="DA\DA_Kind.cs" />
     <Compile Include="DA\DA_Menu.cs" />
+    <Compile Include="DA\DA_User.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddUser.Designer.cs">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmCustomer.cs">
       <SubType>Form</SubType>
@@ -123,6 +132,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
