@@ -46,10 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\BL_AddDish.cs" />
+<<<<<<< HEAD
+    <Compile Include="BL\BL_AddPosition.cs" />
+    <Compile Include="BL\BL_EditDish.cs" />
+    <Compile Include="BL\BL_EditPosition.cs" />
+=======
     <Compile Include="BL\BL_AddEmployee.cs" />
     <Compile Include="BL\BL_EditDish.cs" />
     <Compile Include="BL\BL_EditEmployee.cs" />
+>>>>>>> master
     <Compile Include="BL\BL_Kind.cs" />
+    <Compile Include="BL\BL_Position.cs" />
     <Compile Include="BL\Commen.cs" />
     <Compile Include="BL\Employee.cs" />
     <Compile Include="BL\Menu.cs" />
@@ -64,11 +71,19 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI\FrmAddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddPosition.Designer.cs">
+      <DependentUpon>FrmAddPosition.cs</DependentUpon>
+=======
     <Compile Include="GUI\FrmAddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FrmAddEmployee.Designer.cs">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="GUI\FrmCustomer.cs">
       <SubType>Form</SubType>
@@ -88,11 +103,19 @@
     <Compile Include="GUI\FrmEditDish.Designer.cs">
       <DependentUpon>FrmEditDish.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="GUI\FrmEditPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmEditPosition.Designer.cs">
+      <DependentUpon>FrmEditPosition.cs</DependentUpon>
+=======
     <Compile Include="GUI\FrmEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FrmEditEmployee.Designer.cs">
       <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="GUI\FrmEmployee.cs">
       <SubType>Form</SubType>
@@ -141,8 +164,13 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="GUI\FrmAddPosition.resx">
+      <DependentUpon>FrmAddPosition.cs</DependentUpon>
+=======
     <EmbeddedResource Include="GUI\FrmAddEmployee.resx">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
@@ -153,8 +181,13 @@
     <EmbeddedResource Include="GUI\FrmEditDish.resx">
       <DependentUpon>FrmEditDish.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="GUI\FrmEditPosition.resx">
+      <DependentUpon>FrmEditPosition.cs</DependentUpon>
+=======
     <EmbeddedResource Include="GUI\FrmEditEmployee.resx">
       <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEmployee.resx">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
