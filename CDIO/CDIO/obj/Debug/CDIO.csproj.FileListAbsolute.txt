@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> master
 >>>>>>> master
 E:\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
 =======
@@ -19,6 +22,9 @@ D:\cdio\CDIO\CDIO\obj\Debug\CDIO.FrmLogin.resources
 D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csprojResolveAssemblyReference.cache
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> master
 >>>>>>> master
 >>>>>>> master
 D:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
@@ -39,6 +45,8 @@ D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmUser.resources
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.cache
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
@@ -48,10 +56,15 @@ D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddPosition.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditPosition.resources
 =======
 >>>>>>> master
+>>>>>>> master
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenuAddDish.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditDish.resources
 >>>>>>> 3624264ff11e829f0f997196f9f41111fa58e011
 >>>>>>> ea41c208ba7db41399827fe6e540da5b6af0af41
+<<<<<<< HEAD
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddCustomerType.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditCustomerType.resources
+=======
 <<<<<<< HEAD
 D:\cdio2018\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
 D:\cdio2018\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
@@ -95,5 +108,6 @@ E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
 E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.Cache
 E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddEmployee.resources
 E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditEmployee.resources
+>>>>>>> master
 >>>>>>> master
 >>>>>>> master

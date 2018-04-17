@@ -12,12 +12,16 @@ namespace CDIO.DA
     {
         SqlConnection conn;
 <<<<<<< HEAD
+        string connectString = @"Data Source=TRUNGNGUYEN\SQLEXPRESS;Initial Catalog=SQLRM;Integrated Security=True";
+=======
+<<<<<<< HEAD
         string connectString = @"Data Source=VUDAICA\SQLEXPRESS;Initial Catalog=RM;Integrated Security=True";
 =======
 <<<<<<< HEAD
         string connectString = @"Data Source=DESKTOP-SBOMUI4\SQLEXPRESS;Initial Catalog=cdio397;Integrated Security=True";
 =======
         string connectString = @"Data Source=DESKTOP-JCP96RQ\SQLEXPRESS;Initial Catalog=SQLRM;Integrated Security=True";
+>>>>>>> master
 >>>>>>> master
 >>>>>>> master
 
