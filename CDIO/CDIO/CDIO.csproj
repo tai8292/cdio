@@ -45,12 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Bl_AddCustomerType.cs" />
     <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\Bl_CustomerType.cs" />
+    <Compile Include="BL\Bl_EditCustomerType.cs" />
     <Compile Include="BL\BL_EditDish.cs" />
     <Compile Include="BL\BL_Kind.cs" />
     <Compile Include="BL\Commen.cs" />
     <Compile Include="BL\Menu.cs" />
     <Compile Include="DA\DataProvider.cs" />
+    <Compile Include="DA\DA_Customertype.cs" />
     <Compile Include="DA\DA_Kind.cs" />
     <Compile Include="DA\DA_Menu.cs" />
     <Compile Include="FrmLogin.cs">
@@ -58,6 +62,12 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddCustomerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddCustomerType.Designer.cs">
+      <DependentUpon>FrmAddCustomerType.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmCustomer.cs">
       <SubType>Form</SubType>
@@ -70,6 +80,12 @@
     </Compile>
     <Compile Include="GUI\FrmCustomerType.Designer.cs">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmEditCustomerType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmEditCustomerType.Designer.cs">
+      <DependentUpon>FrmEditCustomerType.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmEditDish.cs">
       <SubType>Form</SubType>
@@ -124,11 +140,17 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddCustomerType.resx">
+      <DependentUpon>FrmAddCustomerType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomerType.resx">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmEditCustomerType.resx">
+      <DependentUpon>FrmEditCustomerType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEditDish.resx">
       <DependentUpon>FrmEditDish.cs</DependentUpon>
