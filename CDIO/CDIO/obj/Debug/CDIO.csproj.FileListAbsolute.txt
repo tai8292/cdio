@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+E:\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
+=======
+D:\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
+D:\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
+D:\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.Cache
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.FrmLogin.resources
+>>>>>>> acd7e8d3dcddefb7b40aca454d365d716a51d31f
+D:\cdio\CDIO\CDIO\obj\Debug\CDIO.csprojResolveAssemblyReference.cache
+>>>>>>> master
 D:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
 D:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
 D:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
@@ -13,6 +30,7 @@ D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenuAddDish.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmOrder.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmPosition.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmUser.resources
+<<<<<<< HEAD
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.cache
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
@@ -20,3 +38,30 @@ D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddPosition.resources
 D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditPosition.resources
+=======
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenuAddDish.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditDish.resources
+>>>>>>> 3624264ff11e829f0f997196f9f41111fa58e011
+>>>>>>> ea41c208ba7db41399827fe6e540da5b6af0af41
+E:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
+E:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
+E:\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csprojResolveAssemblyReference.cache
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.FrmLogin.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmCustomer.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmCustomerType.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditDish.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEmployee.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMain.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenu.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenuAddDish.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmOrder.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmPosition.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmUser.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.Cache
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddEmployee.resources
+E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditEmployee.resources
+>>>>>>> master
