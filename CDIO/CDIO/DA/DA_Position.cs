@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-<<<<<<< HEAD
 namespace CDIO.DA
 {
     class DA_Position
@@ -18,8 +17,6 @@ namespace CDIO.DA
             string sql = "select * from POSITION";
             DataTable dt = new DataTable();//
             dt = dp.getDataTable(sql);
-            dt.Columns["PositionID"].ColumnName = "Position ID";
-            dt.Columns["PositionName"].ColumnName = "Position Name";
             return dt;
         }
         
@@ -41,17 +38,6 @@ namespace CDIO.DA
         {
             string sql = "update POSITION set PositionName='" + name + "'where PositionID ='"+id+"'; ";
             dp.ExcuNonQuery(sql);
-=======
-
-    namespace CDIO.DA
-{
-    class DA_Position
-    {
-        DataProvider dp = new DataProvider();
-        public DataTable getDataTablePosition() {
-            string sql = "select * from POSITION";
-            return dp.getDataTable(sql);
->>>>>>> master
         }
     }
 }
