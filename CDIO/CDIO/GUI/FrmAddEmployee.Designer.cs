@@ -279,6 +279,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label7);
             this.Name = "FrmAddEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEmployee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddEmployee_FormClosing);
             this.Load += new System.EventHandler(this.FrmAddEmployee_Load);

@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnSwitchTable = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDish = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.NameDish = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.flowDish = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTable = new System.Windows.Forms.Panel();
@@ -62,7 +67,7 @@
             // 
             this.panelAction.Controls.Add(this.btnPay);
             this.panelAction.Controls.Add(this.btnSwitchTable);
-            this.panelAction.Controls.Add(this.label2);
+            this.panelAction.Controls.Add(this.lbTotal);
             this.panelAction.Controls.Add(this.label1);
             this.panelAction.Location = new System.Drawing.Point(828, 464);
             this.panelAction.Name = "panelAction";
@@ -89,15 +94,15 @@
             this.btnSwitchTable.Text = "Switch Table";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lbTotal
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(112, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0đ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.Location = new System.Drawing.Point(112, 13);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(141, 20);
+            this.lbTotal.TabIndex = 2;
+            this.lbTotal.Text = "0";
+            this.lbTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label1
             // 
@@ -119,14 +124,41 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NameDish,
+            this.Number,
+            this.Price,
+            this.Total});
+            this.listView1.GridLines = true;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(250, 449);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // NameDish
+            // 
+            this.NameDish.Text = "Dish Name";
+            this.NameDish.Width = 67;
+            // 
+            // Number
+            // 
+            this.Number.Text = "Number";
+            // 
+            // Price
+            // 
+            this.Price.Text = "Price";
+            // 
+            // Total
+            // 
+            this.Total.Text = "Total";
             // 
             // panelMenu
             // 
+            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMenu.Controls.Add(this.flowDish);
             this.panelMenu.Location = new System.Drawing.Point(3, 285);
             this.panelMenu.Name = "panelMenu";
@@ -142,6 +174,7 @@
             // 
             // panelTable
             // 
+            this.panelTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTable.Controls.Add(this.flowTable);
             this.panelTable.Location = new System.Drawing.Point(3, 3);
             this.panelTable.Name = "panelTable";
@@ -164,6 +197,7 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FrmOrder";
             this.Text = "FrmOrder";
+            this.Load += new System.EventHandler(this.FrmOrder_Load);
             this.panelMain.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
             this.panelAction.PerformLayout();
@@ -184,8 +218,12 @@
         private System.Windows.Forms.FlowLayoutPanel flowDish;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button btnSwitchTable;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader NameDish;
+        private System.Windows.Forms.ColumnHeader Number;
+        private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.ColumnHeader Total;
     }
 }

@@ -43,5 +43,41 @@ namespace CDIO.DA
             string sql = "update DISH set DishName=N'" + text2 + "',KindID='" + v + "',Number=" + text3 + ",Price=" + text4 + ",Picture= @HinhAnh where DishID like'"+text1+"'";
             dp.ExcuNonQuery(sql,param);
         }
+
+        public List<Dish> getListDish()
+        {
+            List<Dish> dishList = new List<Dish>();
+            DataProvider dp = new DataProvider();
+            string sql = "select DishID,DishName,KindID,Number,Price as p from DISH" ;
+            DataTable dt = dp.getDataTable(sql);
+            foreach (DataRow item in dt.Rows)
+            {
+                Dish drinks = new Dish(item);
+                dishList.Add(drinks);
+            }
+
+            return dishList;
+        }
+
+        public List<Table> getListTable()
+        {
+            List<Table> tableList = new List<Table>();
+            DataProvider dp = new DataProvider();
+            string sql = "select TableID from THETABLE";
+            DataTable dt = dp.getDataTable(sql);
+            foreach (DataRow item in dt.Rows)
+            {
+                Table table = new Table(item);
+                tableList.Add(table);
+            }
+
+            return tableList;
+        }
+
+        public int getTableBill(string id)
+        {
+            string sql = "select count(*) from TABLEBILL where TABLEID like '" + id+"'";
+            return dp.ExcuScalar(sql);
+        }
     }
 }

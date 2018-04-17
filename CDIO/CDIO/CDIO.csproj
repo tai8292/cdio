@@ -58,6 +58,8 @@
     <Compile Include="DA\DA_Kind.cs" />
     <Compile Include="DA\DA_Menu.cs" />
     <Compile Include="DA\DA_Position.cs" />
+    <Compile Include="DA\Dish.cs" />
+    <Compile Include="DA\Table.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="GUI\FrmEmployee.Designer.cs">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmInput.Designer.cs">
+      <DependentUpon>FrmInput.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmMain.cs">
       <SubType>Form</SubType>
@@ -158,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEmployee.resx">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmInput.resx">
+      <DependentUpon>FrmInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

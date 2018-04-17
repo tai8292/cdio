@@ -45,12 +45,16 @@ namespace CDIO.BL
         public void clickDataGrid(int index)
         {
             frmEmployee.txtID.Text = frmEmployee.dataGridView1.Rows[index].Cells[0].Value.ToString();
-            frmEmployee.txtName.Text = frmEmployee.dataGridView1.Rows[index].Cells[1].Value.ToString();
-            frmEmployee.cbGender.Text = frmEmployee.dataGridView1.Rows[index].Cells[2].Value.ToString();
+            frmEmployee.txtName.Text = frmEmployee.dataGridView1.Rows[index].Cells[1].Value.ToString();         
             frmEmployee.txtAddress.Text = frmEmployee.dataGridView1.Rows[index].Cells[3].Value.ToString();
             frmEmployee.txtPhone.Text = frmEmployee.dataGridView1.Rows[index].Cells[4].Value.ToString();
             frmEmployee.pickerBirthday.Text = frmEmployee.dataGridView1.Rows[index].Cells[5].Value.ToString();
             frmEmployee.cbPosition.SelectedValue = frmEmployee.dataGridView1.Rows[index].Cells[6].Value;
+         
+            if (frmEmployee.dataGridView1.Rows[index].Cells[2].Value.ToString() == "True")
+                frmEmployee.cbGender.SelectedValue = 1;
+            else
+                frmEmployee.cbGender.SelectedValue = 0;
         }
         public void deleteEmployee()
         {

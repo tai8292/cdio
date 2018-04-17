@@ -55,3 +55,6 @@ E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
 E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.Cache
 E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddEmployee.resources
 E:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditEmployee.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddEmployee.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditEmployee.resources
+D:\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmInput.resources
