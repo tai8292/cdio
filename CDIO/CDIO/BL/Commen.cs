@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CDIO.BL
@@ -38,6 +39,16 @@ namespace CDIO.BL
             if (s.Length > 10)
                 return false;
             return true;
+        }
+
+        public Boolean checkAlphaNumberic(string s)
+        {
+            Regex rg = new Regex("[^a-zA-Z0-9]");
+            if (rg.IsMatch(s))
+                return false;
+            return true;
+
+
         }
     }
 }
