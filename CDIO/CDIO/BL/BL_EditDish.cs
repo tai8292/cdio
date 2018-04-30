@@ -21,7 +21,7 @@ namespace CDIO.BL
 
         public void update()
         {
-            daMenu.update(f.txtID.Text, f.txtName.Text, f.txtKind.SelectedValue.ToString(), f.txtNumber.Text, f.txtPrice.Text, f.picture.Image);  
+            daMenu.update(f.txtID.Text, f.txtName.Text, f.txtKind.SelectedValue.ToString(), f.txtNumber.Text, f.txtPrice.Text, f.picture.Image); 
         }
 
         public void loadCombobox()

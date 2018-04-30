@@ -110,6 +110,7 @@
             this.txtKind.Name = "txtKind";
             this.txtKind.Size = new System.Drawing.Size(232, 28);
             this.txtKind.TabIndex = 3;
+            this.txtKind.SelectedIndexChanged += new System.EventHandler(this.txtKind_SelectedIndexChanged);
             // 
             // label3
             // 

@@ -60,6 +60,7 @@ namespace CDIO.GUI
         private void txtNumber_TextChanged(object sender, EventArgs e)
         {
             onlyNumber(txtNumber);
+            
         }
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
@@ -97,6 +98,11 @@ namespace CDIO.GUI
         {
             open.ShowDialog();
             this.picture.Image = Image.FromFile(open.FileName);
+        }
+
+        private void txtKind_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

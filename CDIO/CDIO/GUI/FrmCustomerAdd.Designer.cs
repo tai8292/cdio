@@ -1,6 +1,6 @@
 ﻿namespace CDIO.GUI
 {
-    partial class FrmCustomer
+    partial class FrmCustomerAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txt_Point = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,19 +40,16 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.txt_Address = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddPosition = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancer = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -64,49 +58,14 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 566);
-            this.panel1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(720, 560);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnEdit);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.btnAddPosition);
-            this.panel2.Location = new System.Drawing.Point(744, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(371, 563);
-            this.panel2.TabIndex = 1;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.txt_Point);
             this.panel8.Controls.Add(this.label6);
-            this.panel8.Location = new System.Drawing.Point(6, 346);
+            this.panel8.Location = new System.Drawing.Point(7, 322);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(365, 41);
-            this.panel8.TabIndex = 4;
+            this.panel8.TabIndex = 7;
             // 
             // txt_Point
             // 
@@ -130,14 +89,15 @@
             // 
             this.panel7.Controls.Add(this.cbType);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(3, 299);
+            this.panel7.Location = new System.Drawing.Point(4, 275);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(365, 41);
-            this.panel7.TabIndex = 4;
+            this.panel7.TabIndex = 8;
             // 
             // cbType
             // 
             this.cbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType.ForeColor = System.Drawing.Color.SlateGray;
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(129, 7);
             this.cbType.Name = "cbType";
@@ -158,10 +118,10 @@
             // 
             this.panel6.Controls.Add(this.txt_Phone);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Location = new System.Drawing.Point(3, 252);
+            this.panel6.Location = new System.Drawing.Point(4, 228);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(365, 41);
-            this.panel6.TabIndex = 4;
+            this.panel6.TabIndex = 9;
             // 
             // txt_Phone
             // 
@@ -185,10 +145,10 @@
             // 
             this.panel5.Controls.Add(this.txt_Address);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(3, 205);
+            this.panel5.Location = new System.Drawing.Point(4, 181);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(365, 41);
-            this.panel5.TabIndex = 4;
+            this.panel5.TabIndex = 10;
             // 
             // txt_Address
             // 
@@ -208,44 +168,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Address :";
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(272, 524);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(89, 36);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(147, 524);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 36);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(15, 524);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(89, 36);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.txtName);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(3, 158);
+            this.panel4.Location = new System.Drawing.Point(4, 134);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 41);
-            this.panel4.TabIndex = 3;
+            this.panel4.TabIndex = 6;
             // 
             // txtName
             // 
@@ -269,10 +199,10 @@
             // 
             this.panel3.Controls.Add(this.txtID);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(3, 111);
+            this.panel3.Location = new System.Drawing.Point(4, 87);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 41);
-            this.panel3.TabIndex = 1;
+            this.panel3.TabIndex = 5;
             // 
             // txtID
             // 
@@ -292,30 +222,64 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ID :";
             // 
-            // btnAddPosition
+            // label7
             // 
-            this.btnAddPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPosition.Location = new System.Drawing.Point(200, 3);
-            this.btnAddPosition.Name = "btnAddPosition";
-            this.btnAddPosition.Size = new System.Drawing.Size(161, 59);
-            this.btnAddPosition.TabIndex = 0;
-            this.btnAddPosition.Text = "Add customer";
-            this.btnAddPosition.UseVisualStyleBackColor = true;
-            this.btnAddPosition.Click += new System.EventHandler(this.btnAddPosition_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(76, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(240, 39);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "ADD Cutomer";
             // 
-            // FrmCustomer
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(7, 395);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(89, 36);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancer
+            // 
+            this.btnCancer.Location = new System.Drawing.Point(265, 395);
+            this.btnCancer.Name = "btnCancer";
+            this.btnCancer.Size = new System.Drawing.Size(89, 36);
+            this.btnCancer.TabIndex = 22;
+            this.btnCancer.Text = "Cancel";
+            this.btnCancer.UseVisualStyleBackColor = true;
+            this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(133, 395);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(89, 36);
+            this.btnClear.TabIndex = 21;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // FrmCustomerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 590);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "FrmCustomer";
-            this.Text = "FrmMenu";
-            this.Load += new System.EventHandler(this.FrmCustomer_Load_1);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(377, 435);
+            this.Controls.Add(this.btnCancer);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Name = "FrmCustomerAdd";
+            this.Text = "FrmCustomerAdd";
+            this.Load += new System.EventHandler(this.FrmCustomerAdd_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -329,24 +293,12 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAddPosition;
         private System.Windows.Forms.Panel panel8;
         public System.Windows.Forms.TextBox txt_Point;
         private System.Windows.Forms.Label label6;
@@ -359,6 +311,15 @@
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.TextBox txt_Address;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnCancer;
+        public System.Windows.Forms.Button btnClear;
     }
-
 }

@@ -51,5 +51,15 @@ namespace CDIO.GUI
             FrmEditDish f = new FrmEditDish(txtID.Text,txtName.Text,txtKind.SelectedValue.ToString(),txtNumber.Text,txtPrice.Text,picture.Image);
             f.ShowDialog();
         }
+
+        private void txtKind_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

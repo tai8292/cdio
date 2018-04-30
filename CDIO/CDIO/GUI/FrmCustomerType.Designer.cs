@@ -30,23 +30,23 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.point = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddCustomerType = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.point = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -74,6 +74,28 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(720, 560);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 130;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 380;
+            // 
+            // point
+            // 
+            this.point.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.point.HeaderText = "Point";
+            this.point.Name = "point";
+            this.point.ReadOnly = true;
             // 
             // btnAddCustomerType
             // 
@@ -94,6 +116,14 @@
             this.panel3.Size = new System.Drawing.Size(365, 41);
             this.panel3.TabIndex = 1;
             // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(129, 10);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(232, 26);
+            this.txtID.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -104,14 +134,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ID :";
             // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(129, 10);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(232, 26);
-            this.txtID.TabIndex = 2;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.txtName);
@@ -120,6 +142,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 41);
             this.panel4.TabIndex = 3;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(129, 10);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(232, 26);
+            this.txtName.TabIndex = 2;
             // 
             // label2
             // 
@@ -130,14 +160,6 @@
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name :";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(129, 10);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(232, 26);
-            this.txtName.TabIndex = 2;
             // 
             // btnEdit
             // 
@@ -175,6 +197,14 @@
             this.panel8.Size = new System.Drawing.Size(365, 41);
             this.panel8.TabIndex = 4;
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(126, 10);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(232, 26);
+            this.textBox4.TabIndex = 2;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -184,14 +214,6 @@
             this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 2;
             this.label6.Text = "Point :";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(126, 10);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 26);
-            this.textBox4.TabIndex = 2;
             // 
             // panel2
             // 
@@ -207,27 +229,6 @@
             this.panel2.Size = new System.Drawing.Size(371, 563);
             this.panel2.TabIndex = 1;
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 130;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 380;
-            // 
-            // point
-            // 
-            this.point.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.point.HeaderText = "Point";
-            this.point.Name = "point";
-            this.point.ReadOnly = true;
-            // 
             // FrmCustomerType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +238,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmCustomerType";
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.FrmCustomerType_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);

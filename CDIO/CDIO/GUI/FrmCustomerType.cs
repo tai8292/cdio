@@ -16,5 +16,15 @@ namespace CDIO.GUI
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmCustomerType_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

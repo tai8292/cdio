@@ -72,5 +72,17 @@ namespace CDIO.GUI
                 t.Text = t.Text.Remove(t.Text.Length - 1);
             }
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKind_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }
