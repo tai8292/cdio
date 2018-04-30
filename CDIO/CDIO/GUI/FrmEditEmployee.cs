@@ -41,7 +41,20 @@ namespace CDIO.GUI
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            employee.editEmployee();
+            if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
+            {
+                if (txtPhone.Text.All(char.IsDigit) == true)
+                {
+                    employee.editEmployee();
+                    MessageBox.Show("You have successfully edit an employee !");
+                }
+                else {
+                    MessageBox.Show("Phone must be a number !");
+                }
+            }
+            else {
+                MessageBox.Show("All field must not be empty !");
+            }
         }
 
         private void FrmEditEmployee_Load(object sender, EventArgs e)
@@ -73,10 +86,11 @@ namespace CDIO.GUI
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtID.Clear();
             txtName.Clear();
             txtAddress.Clear();
             txtPhone.Clear();
         }
+
+
     }
 }

@@ -31,7 +31,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.pickerBirthday = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pickerBirthday = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -79,7 +79,7 @@
             this.panel2.Location = new System.Drawing.Point(8, 343);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(365, 41);
-            this.panel2.TabIndex = 48;
+            this.panel2.TabIndex = 6;
             // 
             // cbPosition
             // 
@@ -89,13 +89,6 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Size = new System.Drawing.Size(232, 28);
             this.cbPosition.TabIndex = 4;
-            // 
-            // pickerBirthday
-            // 
-            this.pickerBirthday.Location = new System.Drawing.Point(126, 10);
-            this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(232, 20);
-            this.pickerBirthday.TabIndex = 3;
             // 
             // label1
             // 
@@ -114,7 +107,7 @@
             this.panel1.Location = new System.Drawing.Point(7, 296);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(365, 41);
-            this.panel1.TabIndex = 40;
+            this.panel1.TabIndex = 5;
             // 
             // label7
             // 
@@ -151,7 +144,7 @@
             this.panel4.Location = new System.Drawing.Point(7, 108);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 41);
-            this.panel4.TabIndex = 43;
+            this.panel4.TabIndex = 1;
             // 
             // cbGender
             // 
@@ -179,7 +172,6 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
-            this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -198,7 +190,7 @@
             this.panel7.Location = new System.Drawing.Point(7, 249);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(365, 41);
-            this.panel7.TabIndex = 39;
+            this.panel7.TabIndex = 4;
             // 
             // txtAddress
             // 
@@ -207,7 +199,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
-            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -224,7 +215,7 @@
             this.btnCancer.Location = new System.Drawing.Point(284, 414);
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(89, 36);
-            this.btnCancer.TabIndex = 46;
+            this.btnCancer.TabIndex = 9;
             this.btnCancer.Text = "Cancel";
             this.btnCancer.UseVisualStyleBackColor = true;
             this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
@@ -234,7 +225,7 @@
             this.btnClear.Location = new System.Drawing.Point(143, 414);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 36);
-            this.btnClear.TabIndex = 45;
+            this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -244,7 +235,7 @@
             this.btnEdit.Location = new System.Drawing.Point(8, 414);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(89, 36);
-            this.btnEdit.TabIndex = 44;
+            this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -256,7 +247,7 @@
             this.panel6.Location = new System.Drawing.Point(7, 202);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(365, 41);
-            this.panel6.TabIndex = 41;
+            this.panel6.TabIndex = 3;
             // 
             // panel5
             // 
@@ -265,7 +256,7 @@
             this.panel5.Location = new System.Drawing.Point(7, 155);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(365, 41);
-            this.panel5.TabIndex = 42;
+            this.panel5.TabIndex = 2;
             // 
             // panel3
             // 
@@ -274,7 +265,7 @@
             this.panel3.Location = new System.Drawing.Point(7, 62);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 41);
-            this.panel3.TabIndex = 44;
+            this.panel3.TabIndex = 0;
             // 
             // txtID
             // 
@@ -295,6 +286,14 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "ID:";
             // 
+            // pickerBirthday
+            // 
+            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickerBirthday.Location = new System.Drawing.Point(126, 5);
+            this.pickerBirthday.Name = "pickerBirthday";
+            this.pickerBirthday.Size = new System.Drawing.Size(232, 26);
+            this.pickerBirthday.TabIndex = 5;
+            // 
             // FrmEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,6 +311,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Name = "FrmEditEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Employee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEditEmployee_FormClosing);
             this.Load += new System.EventHandler(this.FrmEditEmployee_Load);
@@ -339,7 +339,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.ComboBox cbPosition;
-        public System.Windows.Forms.DateTimePicker pickerBirthday;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
@@ -361,5 +360,6 @@
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.DateTimePicker pickerBirthday;
     }
 }
