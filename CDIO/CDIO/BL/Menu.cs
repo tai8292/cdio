@@ -32,13 +32,6 @@ namespace CDIO.BL
             frmMenu.txtKind.DisplayMember = "KindName";
         }
 
-        public void addDish()
-        {
-    //        menu.addDish(frmMenu.txtID.Text,frmMenu.txtName.Text,
-    //            frmMenu.txtKind.SelectedValue.ToString(),frmMenu.txtNumber.Text,
-    //            frmMenu.txtPrice.Text,)
-        }
-
         public void clickDataGrid(int index)
         {
             frmMenu.txtID.Text = frmMenu.dataGridView1.Rows[index].Cells[0].Value.ToString();

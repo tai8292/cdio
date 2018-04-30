@@ -271,7 +271,6 @@
             this.Name = "FrmMenuAddDish";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmMenuAddDish";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenuAddDish_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenuAddDish_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

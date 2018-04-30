@@ -302,6 +302,7 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Name = "FrmEditDish";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditDish";
             this.Load += new System.EventHandler(this.FrmEditDish_Load);
             this.panel4.ResumeLayout(false);
