@@ -16,7 +16,7 @@ namespace CDIO.GUI
         public FrmAddEmployee()
         {
             InitializeComponent();
-            employee = new BL.BL_AddEmployee(this);
+            employee = new BL.BL_AddEmployee(this); 
         }
 
 
