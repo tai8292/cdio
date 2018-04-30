@@ -12,7 +12,7 @@ namespace CDIO.GUI
 {
     public partial class FrmOrder : Form
     {
-        /*BL.Menu blMenu;
+        BL.Menu blMenu;
         DA.DA_Menu daMenu;
         private int Hienco;
         private string tableID;
@@ -35,11 +35,6 @@ namespace CDIO.GUI
             this.employeeID = id;
         }
 
-        private void flowTable_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         public void loadForm()
         {
             loadDish();
@@ -57,12 +52,15 @@ namespace CDIO.GUI
         //load list table under button
         public void loadTable()
         {
+            MessageBox.Show("1");
             this.flowTable.Controls.Clear();
             int DrinksWitdh = 100;
             int DrinksHeight = 100;
-
+            MessageBox.Show("2");
             List<DA.Table> tableList = new List<DA.Table>();
+            MessageBox.Show("3");
             tableList = daMenu.getListTable();
+            MessageBox.Show("4");
             foreach (DA.Table item in tableList)
             {
                 Button btn = new Button()
@@ -112,8 +110,8 @@ namespace CDIO.GUI
                 {
 
                     ListViewItem Ten = new ListViewItem(getDishName((int)row["DishID"]), 0);
-                    ListViewItem.ListViewSubItem SoLuong = new ListViewItem.ListViewSubItem(Ten,"" +(int)row["number"]);
-                    ListViewItem.ListViewSubItem Gia = new ListViewItem.ListViewSubItem(Ten, ""+(double)row["Price"]);
+                    ListViewItem.ListViewSubItem SoLuong = new ListViewItem.ListViewSubItem(Ten, "" + (int)row["number"]);
+                    ListViewItem.ListViewSubItem Gia = new ListViewItem.ListViewSubItem(Ten, "" + (double)row["Price"]);
                     double total = (int)row["number"] * (double)row["Price"];
                     this.lbTotal.Text = (int.Parse(lbTotal.Text) + total).ToString();
                     ListViewItem.ListViewSubItem Tong = new ListViewItem.ListViewSubItem(Ten, total.ToString());
@@ -169,7 +167,7 @@ namespace CDIO.GUI
                 {
                     daMenu.createBill(tableID);
                     billID = daMenu.getBillID();
-                    daMenu.saveTableBill(tableID,billID);
+                    daMenu.saveTableBill(tableID, billID);
                 }
                 List<DA.Dish> ld = daMenu.getListDish();
                 //lấy tên đồ uống
@@ -240,7 +238,6 @@ namespace CDIO.GUI
                     }
                 }
             }
-<<<<<<< HEAD
             loadTable();
             loadDish();
         }
@@ -258,7 +255,7 @@ namespace CDIO.GUI
             {
                 this.listView1.Items.Clear();
                 this.lbTotal.Text = "0";
-                daMenu.updateBill(billID,1,1);
+                daMenu.updateBill(billID, 1, 1);
                 daMenu.deleteTableBill(billID);
                 FrmInputCus fc = new FrmInputCus();
                 FrmBill f = new FrmBill(billID, fc.cusID, employeeID);
@@ -268,19 +265,19 @@ namespace CDIO.GUI
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            for (int i = 0;i<= listView1.SelectedIndices.Count - 1; i++)
+            for (int i = 0; i <= listView1.SelectedIndices.Count - 1; i++)
             {
                 //trừ tiền
                 this.lbTotal.Text = (int.Parse(this.lbTotal.Text) - int.Parse(this.listView1.Items[this.listView1.SelectedIndices[i]].SubItems[3].Text)).ToString();
                 //xóa items
-      
+
                 string dishID = getDishID(this.listView1.Items[this.listView1.SelectedIndices[i]].SubItems[0].Text);
                 this.listView1.Items.RemoveAt(this.listView1.SelectedIndices[i]);
                 daMenu.deleteBillDetail(billID, dishID);
             }
-            if(this.listView1.Items.Count ==0)
+            if (this.listView1.Items.Count == 0)
             {
-                daMenu.deleteTableBill(billID) ;
+                daMenu.deleteTableBill(billID);
             }
             loadDish();
             loadTable();
@@ -294,8 +291,7 @@ namespace CDIO.GUI
                     return listDish[i].DishID.ToString();
             return "";
         }
-=======
-        }*/
->>>>>>> master
+
     }
 }
+

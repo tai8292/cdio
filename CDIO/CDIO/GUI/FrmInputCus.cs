@@ -22,7 +22,7 @@ namespace CDIO.GUI
         private void btnOkay_Click(object sender, EventArgs e)
         {
             string sql = "select count(*) from CUSTOMER where CustomerID like '" + txtInput.Text + "'";
-            if(dp.ExcuScalar(sql) == 1)
+            if (dp.ExcuScalar(sql) == 1)
             {
                 cusID = txtInput.Text;
                 this.Close();

@@ -43,7 +43,7 @@ namespace CDIO.GUI
         }
         private void btnCancer_Click(object sender, EventArgs e)
         {
-            if (DialogResult == MessageBox.Show("Do you want close form Add?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) ;
+            if (DialogResult == MessageBox.Show("Do you want close form Add?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             this.Close();
         }
         private void btnClear_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace CDIO.GUI
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            FrmOrder f = new FrmOrder();
+            FrmOrder f = new FrmOrder(empID);
             nhungForm(f);
         }
 
@@ -81,7 +81,7 @@ namespace CDIO.GUI
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            FrmOrder f = new FrmOrder();
+            FrmOrder f = new FrmOrder(empID);
             nhungForm(f);
         }
     }

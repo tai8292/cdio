@@ -16,6 +16,6 @@ namespace CDIO.DA
             id = (string)row[0];
         }
 
-       // public string Id { get => id; set => id = value; }
+        public string Id { get => id; set => id = value; }
     }
 }

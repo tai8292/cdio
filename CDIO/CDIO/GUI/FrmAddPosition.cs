@@ -63,56 +63,5 @@ namespace CDIO.GUI
 
                 this.Close();
         }
-
-<<<<<<< HEAD
-       
-=======
-
-      /*  private void txtID_Validated(object sender, EventArgs e)
-        {
-            if (txtID.Text == "" )
-            {
-                this.btnSave.Enabled = false;
-            }
-            else
-                this.btnSave.Enabled = true;
-        }
-
-        private void FrmAddPosition_Load(object sender, EventArgs e)
-        {
-            this.btnSave.Enabled = false;
-        }
-
-      private void txtName_Validated(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtID.Text) || string.IsNullOrEmpty(txtName.Text))
-            {
-                this.btnSave.Enabled = false;
-            }
-            else
-                this.btnSave.Enabled = true;
-        }
-
-      private void txtID_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtID.Text) || string.IsNullOrEmpty(txtName.Text))
-            {
-                this.btnSave.Enabled = false;
-            }
-            else
-                this.btnSave.Enabled = true;
-        }
-
-        private void txtName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtID.Text) || string.IsNullOrEmpty(txtName.Text))
-            {
-                this.btnSave.Enabled = false;
-            }
-            else
-                this.btnSave.Enabled = true;
-
-        }*/
->>>>>>> master
     }
 }
