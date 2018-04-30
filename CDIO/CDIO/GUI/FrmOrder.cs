@@ -12,7 +12,7 @@ namespace CDIO.GUI
 {
     public partial class FrmOrder : Form
     {
-        BL.Menu blMenu;
+        /*BL.Menu blMenu;
         DA.DA_Menu daMenu;
         private int Hienco;
         public FrmOrder()
@@ -159,6 +159,6 @@ namespace CDIO.GUI
                     }
                 }
             }
-        }
+        }*/
     }
 }

@@ -45,7 +45,11 @@ namespace CDIO.GUI
 
         private void FrmPosition_Load(object sender, EventArgs e)
         {
+            
+            
+            this.btnDelete.Enabled = false;
             this.LoadForm();
+          
         }
         public void LoadForm()
         {
@@ -55,6 +59,8 @@ namespace CDIO.GUI
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             blPosition.clickDataGrid(e.RowIndex);
+            btnEdit.Enabled= true;
+            btnDelete.Enabled = true;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CDIO.GUI
         BL.BL_EditPosition Position;
         string PositionName;
         string PositionID;
+        BL.Commen commen = new BL.Commen();
 
         public FrmEditPosition()
         {
@@ -49,14 +50,22 @@ namespace CDIO.GUI
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
-
-            Position.editPosition();
-            MessageBox.Show("Edit Position Successfull");
-            this.Close();
+        { 
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("NAME  must not null");
+            }
+            else
+             if (!commen.checkAlphaNumberic(txtID.Text) || !commen.checkAlphaNumberic(txtName.Text))
+            {
+                MessageBox.Show("not enter special character");
+            }else
+            {
+                Position.editPosition();
+                MessageBox.Show("Edit Position Successfull");
+                this.Close();
+            }
         }
-
-        
             private void btnCancer_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Do you want to Cancel this Form Edit Position? ", "Noted", MessageBoxButtons.YesNo, MessageBoxIcon.Question))// câu lệnh để hiển thị câu bạn có chắc chắn muốn bỏ qua hoặc rời khỏi hoặc xóa

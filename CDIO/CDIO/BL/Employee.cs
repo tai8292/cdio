@@ -60,6 +60,7 @@ namespace CDIO.BL
         {
             employee.deleteEmployee(frmEmployee.txtID.Text);
             this.loadForm();
+
         }
     }
 }

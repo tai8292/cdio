@@ -63,7 +63,7 @@
             this.btnCancer.Location = new System.Drawing.Point(285, 357);
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(89, 36);
-            this.btnCancer.TabIndex = 36;
+            this.btnCancer.TabIndex = 9;
             this.btnCancer.Text = "Cancel";
             this.btnCancer.UseVisualStyleBackColor = true;
             this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
@@ -73,7 +73,7 @@
             this.btnClear.Location = new System.Drawing.Point(144, 357);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 36);
-            this.btnClear.TabIndex = 35;
+            this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -83,7 +83,7 @@
             this.btnAdd.Location = new System.Drawing.Point(9, 357);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(89, 36);
-            this.btnAdd.TabIndex = 34;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -95,7 +95,7 @@
             this.panel6.Location = new System.Drawing.Point(8, 145);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(365, 41);
-            this.panel6.TabIndex = 30;
+            this.panel6.TabIndex = 3;
             // 
             // txtAddress
             // 
@@ -104,7 +104,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
-            this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -123,7 +122,7 @@
             this.panel7.Location = new System.Drawing.Point(8, 192);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(365, 41);
-            this.panel7.TabIndex = 29;
+            this.panel7.TabIndex = 4;
             // 
             // txtPhone
             // 
@@ -132,7 +131,6 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
-            this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -151,7 +149,7 @@
             this.panel5.Location = new System.Drawing.Point(8, 98);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(365, 41);
-            this.panel5.TabIndex = 31;
+            this.panel5.TabIndex = 2;
             // 
             // cbGender
             // 
@@ -179,7 +177,7 @@
             this.panel4.Location = new System.Drawing.Point(8, 51);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 41);
-            this.panel4.TabIndex = 32;
+            this.panel4.TabIndex = 1;
             // 
             // txtName
             // 
@@ -187,7 +185,7 @@
             this.txtName.Location = new System.Drawing.Point(126, 10);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 0;
             // 
             // label2
             // 
@@ -196,7 +194,7 @@
             this.label2.Location = new System.Drawing.Point(8, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Name:";
             // 
             // label7
@@ -216,14 +214,15 @@
             this.panel1.Location = new System.Drawing.Point(8, 239);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(365, 41);
-            this.panel1.TabIndex = 30;
+            this.panel1.TabIndex = 5;
             // 
             // pickerBirthday
             // 
-            this.pickerBirthday.Location = new System.Drawing.Point(126, 10);
+            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickerBirthday.Location = new System.Drawing.Point(126, 5);
             this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(232, 20);
-            this.pickerBirthday.TabIndex = 3;
+            this.pickerBirthday.Size = new System.Drawing.Size(232, 26);
+            this.pickerBirthday.TabIndex = 4;
             // 
             // label1
             // 
@@ -232,7 +231,7 @@
             this.label1.Location = new System.Drawing.Point(8, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Birthday:";
             // 
             // panel2
@@ -242,7 +241,7 @@
             this.panel2.Location = new System.Drawing.Point(9, 286);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(365, 41);
-            this.panel2.TabIndex = 38;
+            this.panel2.TabIndex = 6;
             // 
             // cbPosition
             // 
@@ -280,7 +279,7 @@
             this.Controls.Add(this.label7);
             this.Name = "FrmAddEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmAddEmployee";
+            this.Text = "Add Employee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddEmployee_FormClosing);
             this.Load += new System.EventHandler(this.FrmAddEmployee_Load);
             this.panel6.ResumeLayout(false);

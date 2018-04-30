@@ -187,7 +187,7 @@
             this.flowTable.Name = "flowTable";
             this.flowTable.Size = new System.Drawing.Size(813, 270);
             this.flowTable.TabIndex = 0;
-            this.flowTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flowTable_Paint);
+            //this.flowTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flowTable_Paint);
             // 
             // FrmOrder
             // 
@@ -197,7 +197,7 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FrmOrder";
             this.Text = "FrmOrder";
-            this.Load += new System.EventHandler(this.FrmOrder_Load);
+            //this.Load += new System.EventHandler(this.FrmOrder_Load);
             this.panelMain.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
             this.panelAction.PerformLayout();
