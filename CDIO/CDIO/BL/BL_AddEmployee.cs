@@ -38,7 +38,7 @@ namespace CDIO.BL
             frm.cbPosition.DisplayMember = "PositionName";
         }
         public void addEmployee() {
-            employee.addEmployee(frm.txtName.Text, frm.cbGender.SelectedValue.ToString(), frm.txtAddress.Text, frm.txtPhone.Text, frm.pickerBirthday.Value, frm.cbPosition.SelectedValue.ToString());
+            employee.addEmployee(frm.txtName.Text, frm.cbGender.SelectedValue.ToString(), frm.txtAddress.Text, frm.txtPhone.Text, frm.pickerBirthday.Value.ToShortDateString(), frm.cbPosition.SelectedValue.ToString());
         }
     }
 }

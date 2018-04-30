@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,11 @@ namespace CDIO.DA
     class DataProvider
     {
         SqlConnection conn;
+<<<<<<< HEAD
+        string connectString = @"Data Source=DESKTOP-JCP96RQ\SQLEXPRESS;Initial Catalog=SQLRM;Integrated Security=True";
+=======
         string connectString = @"Data Source=DESKTOP-SBOMUI4\SQLEXPRESS;Initial Catalog=cdio397;Integrated Security=True ";
+>>>>>>> master
 
         public DataProvider()
         {

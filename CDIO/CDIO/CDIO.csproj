@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>obj\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,9 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\BL_AddCustomer.cs" />
     <Compile Include="BL\Bl_AddCustomerType.cs" />
     <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\BL_Customer.cs" />
     <Compile Include="BL\Bl_CustomerType.cs" />
+    <Compile Include="BL\BL_EditCustomer.cs" />
     <Compile Include="BL\Bl_EditCustomerType.cs" />
     <Compile Include="BL\BL_AddUser.cs" />
     <Compile Include="BL\BL_AddPosition.cs" />
@@ -62,6 +65,7 @@
     <Compile Include="BL\Menu.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DA\DataProvider.cs" />
+    <Compile Include="DA\DA_Customer.cs" />
     <Compile Include="DA\DA_Customertype.cs" />
     <Compile Include="DA\DA_Employee.cs" />
     <Compile Include="DA\DA_Kind.cs" />
@@ -75,6 +79,12 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmAddCustomerType.cs">
       <SubType>Form</SubType>
@@ -111,6 +121,12 @@
     </Compile>
     <Compile Include="GUI\FrmCustomerType.Designer.cs">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmEditCustomer.Designer.cs">
+      <DependentUpon>FrmEditCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmEditCustomerType.cs">
       <SubType>Form</SubType>
@@ -189,6 +205,9 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmAddCustomerType.resx">
       <DependentUpon>FrmAddCustomerType.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomerType.resx">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmEditCustomer.resx">
+      <DependentUpon>FrmEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEditCustomerType.resx">
       <DependentUpon>FrmEditCustomerType.cs</DependentUpon>
