@@ -13,7 +13,7 @@ namespace CDIO.GUI
     public partial class FrmInputCus : Form
     {
         DA.DataProvider dp = new DA.DataProvider();
-        public string cusID;
+        public string cusID ="0";
         public FrmInputCus()
         {
             InitializeComponent();

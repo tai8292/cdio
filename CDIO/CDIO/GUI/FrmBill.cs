@@ -23,7 +23,6 @@ namespace CDIO.GUI
         {
             InitializeComponent();
             this.billID = billID;
-            MessageBox.Show(billID);
             this.cusID = cusID;
             this.empID = empID;
         }
@@ -39,8 +38,8 @@ namespace CDIO.GUI
             DataBillTableAdapters.CUSTOMERTYPETableAdapter cusType = new DataBillTableAdapters.CUSTOMERTYPETableAdapter();
             DataBillTableAdapters.EMPLOYEETableAdapter emp = new DataBillTableAdapters.EMPLOYEETableAdapter();
             DataBill data = new DataBill();
-            bill.Fill(data.BILL, Int32.Parse(this.billID));
-            billDetail.Fill(data.BILLDETAIL, Int32.Parse(this.billID));
+            bill.Fill(data.BILL, int.Parse(this.billID));
+            billDetail.Fill(data.BILLDETAIL, int.Parse(this.billID));
             dish.Fill(data.DISH);
             cus.Fill(data.CUSTOMER, Int32.Parse(this.cusID));
             emp.Fill(data.EMPLOYEE, Int32.Parse(this.empID));

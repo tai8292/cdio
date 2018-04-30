@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtInput = new System.Windows.Forms.TextBox();
             this.btnOkay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtInput = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +44,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 90);
             this.panel1.TabIndex = 1;
+            // 
+            // txtInput
+            // 
+            this.txtInput.Location = new System.Drawing.Point(56, 27);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(166, 20);
+            this.txtInput.TabIndex = 3;
             // 
             // btnOkay
             // 
@@ -65,15 +72,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Input customer ID:";
             // 
-            // txtInput
-            // 
-            this.txtInput.Location = new System.Drawing.Point(56, 27);
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(166, 20);
-            this.txtInput.TabIndex = 3;
-            // 
             // FrmInputCus
             // 
+            this.AcceptButton = this.btnOkay;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 105);

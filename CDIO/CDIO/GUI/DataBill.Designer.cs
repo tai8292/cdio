@@ -4336,18 +4336,24 @@ SELECT ID, BillID, DishID, Number, Price FROM BILLDETAIL WHERE (ID = @ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, BillID, DishID, Number, Price FROM dbo.BILLDETAIL where ID = @billID";
+            this._commandCollection[0].CommandText = "SELECT ID, BillID, DishID, Number, Price FROM dbo.BILLDETAIL where BillID = @bill" +
+                "ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@billID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@billID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BillID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataBill.BILLDETAILDataTable dataTable, int billID) {
+        public virtual int Fill(DataBill.BILLDETAILDataTable dataTable, global::System.Nullable<int> billID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(billID));
+            if ((billID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(billID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -4359,9 +4365,14 @@ SELECT ID, BillID, DishID, Number, Price FROM BILLDETAIL WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataBill.BILLDETAILDataTable GetData(int billID) {
+        public virtual DataBill.BILLDETAILDataTable GetData(global::System.Nullable<int> billID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(billID));
+            if ((billID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(billID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             DataBill.BILLDETAILDataTable dataTable = new DataBill.BILLDETAILDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

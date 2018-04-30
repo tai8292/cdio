@@ -52,15 +52,11 @@ namespace CDIO.GUI
         //load list table under button
         public void loadTable()
         {
-            MessageBox.Show("1");
             this.flowTable.Controls.Clear();
             int DrinksWitdh = 100;
             int DrinksHeight = 100;
-            MessageBox.Show("2");
             List<DA.Table> tableList = new List<DA.Table>();
-            MessageBox.Show("3");
             tableList = daMenu.getListTable();
-            MessageBox.Show("4");
             foreach (DA.Table item in tableList)
             {
                 Button btn = new Button()
@@ -258,8 +254,9 @@ namespace CDIO.GUI
                 daMenu.updateBill(billID, 1, 1);
                 daMenu.deleteTableBill(billID);
                 FrmInputCus fc = new FrmInputCus();
+                fc.ShowDialog();
                 FrmBill f = new FrmBill(billID, fc.cusID, employeeID);
-                f.Show();
+                f.ShowDialog();
             }
         }
 
