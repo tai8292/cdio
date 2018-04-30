@@ -30,6 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kind = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pictrure = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -52,12 +58,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddDish = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dishName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kind = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pictrure = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,6 +94,52 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "DishID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // dishName
+            // 
+            this.dishName.DataPropertyName = "DishName";
+            this.dishName.HeaderText = "Dish name";
+            this.dishName.Name = "dishName";
+            this.dishName.ReadOnly = true;
+            this.dishName.Width = 150;
+            // 
+            // kind
+            // 
+            this.kind.DataPropertyName = "KindID";
+            this.kind.HeaderText = "Kind";
+            this.kind.Name = "kind";
+            this.kind.ReadOnly = true;
+            // 
+            // number
+            // 
+            this.number.DataPropertyName = "Number";
+            this.number.HeaderText = "Number";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "Price";
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // Pictrure
+            // 
+            this.Pictrure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Pictrure.DataPropertyName = "Picture";
+            this.Pictrure.HeaderText = "Image";
+            this.Pictrure.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Pictrure.Name = "Pictrure";
+            this.Pictrure.ReadOnly = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnDelete);
@@ -112,6 +158,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Enabled = false;
             this.btnDelete.Location = new System.Drawing.Point(272, 524);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 36);
@@ -122,6 +169,7 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Enabled = false;
             this.btnEdit.Location = new System.Drawing.Point(27, 524);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(89, 36);
@@ -310,52 +358,6 @@
             this.btnAddDish.Text = "Add dish";
             this.btnAddDish.UseVisualStyleBackColor = true;
             this.btnAddDish.Click += new System.EventHandler(this.btnAddDish_Click);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "DishID";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 50;
-            // 
-            // dishName
-            // 
-            this.dishName.DataPropertyName = "DishName";
-            this.dishName.HeaderText = "Dish name";
-            this.dishName.Name = "dishName";
-            this.dishName.ReadOnly = true;
-            this.dishName.Width = 150;
-            // 
-            // kind
-            // 
-            this.kind.DataPropertyName = "KindID";
-            this.kind.HeaderText = "Kind";
-            this.kind.Name = "kind";
-            this.kind.ReadOnly = true;
-            // 
-            // number
-            // 
-            this.number.DataPropertyName = "Number";
-            this.number.HeaderText = "Number";
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "Price";
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // Pictrure
-            // 
-            this.Pictrure.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Pictrure.DataPropertyName = "Picture";
-            this.Pictrure.HeaderText = "Image";
-            this.Pictrure.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Pictrure.Name = "Pictrure";
-            this.Pictrure.ReadOnly = true;
             // 
             // FrmMenu
             // 

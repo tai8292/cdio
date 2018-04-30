@@ -12,9 +12,16 @@ namespace CDIO.GUI
 {
     public partial class FrmMain : Form
     {
+        public string empID;
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        public FrmMain(string id)
+        {
+            InitializeComponent();
+            empID = id;
         }
 
         private void nhungForm(Form  f)
@@ -69,6 +76,12 @@ namespace CDIO.GUI
         private void btnUser_Click(object sender, EventArgs e)
         {
             FrmUser f = new FrmUser();
+            nhungForm(f);
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            FrmOrder f = new FrmOrder();
             nhungForm(f);
         }
     }

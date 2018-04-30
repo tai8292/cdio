@@ -32,13 +32,6 @@ namespace CDIO.BL
             frmMenu.txtKind.DisplayMember = "KindName";
         }
 
-        public void addDish()
-        {
-    //        menu.addDish(frmMenu.txtID.Text,frmMenu.txtName.Text,
-    //            frmMenu.txtKind.SelectedValue.ToString(),frmMenu.txtNumber.Text,
-    //            frmMenu.txtPrice.Text,)
-        }
-
         public void clickDataGrid(int index)
         {
             frmMenu.txtID.Text = frmMenu.dataGridView1.Rows[index].Cells[0].Value.ToString();
@@ -46,7 +39,7 @@ namespace CDIO.BL
             frmMenu.txtNumber.Text = frmMenu.dataGridView1.Rows[index].Cells[3].Value.ToString();
             frmMenu.txtPrice.Text = frmMenu.dataGridView1.Rows[index].Cells[4].Value.ToString();
             frmMenu.txtKind.SelectedValue = frmMenu.dataGridView1.Rows[index].Cells[2].Value;
-            //frmMenu.picture.Image = commen.byteToImage((byte[])frmMenu.dataGridView1.Rows[index].Cells[5].Value);
+            frmMenu.picture.Image = commen.byteToImage((byte[])frmMenu.dataGridView1.Rows[index].Cells[5].Value);
         }
 
         public void deleteDish()

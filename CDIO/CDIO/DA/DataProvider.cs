@@ -67,5 +67,15 @@ namespace CDIO.DA
             Closed();
             return ketqua;
         }
+
+        public int ExcuScalar(string sql,SqlParameter param)
+        {
+            Open();
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.Add(param);
+            int ketqua = (int)comm.ExecuteScalar();
+            Closed();
+            return ketqua;
+        }
     }
 }

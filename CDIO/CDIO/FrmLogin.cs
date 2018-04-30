@@ -12,14 +12,11 @@ namespace CDIO
 {
     public partial class FrmLogin : Form
     {
+        DA.DA_User daUser;
         public FrmLogin()
         {
             InitializeComponent();
-        }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
+            daUser = new DA.DA_User();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -37,10 +34,18 @@ namespace CDIO
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            GUI.FrmMain f = new GUI.FrmMain();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (daUser.checkUser(txtUsername.Text, txtPassword.Text))
+            {
+                string id = daUser.getEmployeeID(txtUsername.Text);
+                GUI.FrmMain f = new GUI.FrmMain(id);
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username or password not correct, Try againt");
+            }
         }
     }
 }

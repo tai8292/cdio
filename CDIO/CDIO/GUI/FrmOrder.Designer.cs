@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
@@ -36,6 +36,8 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDish = new System.Windows.Forms.Panel();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.lbTable = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.NameDish = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -83,6 +85,7 @@
             this.btnPay.TabIndex = 4;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnSwitchTable
             // 
@@ -93,6 +96,7 @@
             this.btnSwitchTable.TabIndex = 3;
             this.btnSwitchTable.Text = "Switch Table";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // lbTotal
             // 
@@ -116,11 +120,33 @@
             // 
             // panelDish
             // 
+            this.panelDish.Controls.Add(this.btnRemove);
+            this.panelDish.Controls.Add(this.lbTable);
             this.panelDish.Controls.Add(this.listView1);
             this.panelDish.Location = new System.Drawing.Point(828, 3);
             this.panelDish.Name = "panelDish";
             this.panelDish.Size = new System.Drawing.Size(256, 455);
             this.panelDish.TabIndex = 1;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(154, 5);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(99, 34);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // lbTable
+            // 
+            this.lbTable.AutoSize = true;
+            this.lbTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTable.Location = new System.Drawing.Point(3, 14);
+            this.lbTable.Name = "lbTable";
+            this.lbTable.Size = new System.Drawing.Size(86, 25);
+            this.lbTable.TabIndex = 1;
+            this.lbTable.Text = "Table : ";
             // 
             // listView1
             // 
@@ -131,10 +157,10 @@
             this.Total});
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
-            this.listView1.Location = new System.Drawing.Point(3, 3);
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(3, 45);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(250, 449);
+            this.listView1.Size = new System.Drawing.Size(250, 407);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -202,6 +228,7 @@
             this.panelAction.ResumeLayout(false);
             this.panelAction.PerformLayout();
             this.panelDish.ResumeLayout(false);
+            this.panelDish.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelTable.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -225,5 +252,7 @@
         private System.Windows.Forms.ColumnHeader Number;
         private System.Windows.Forms.ColumnHeader Price;
         private System.Windows.Forms.ColumnHeader Total;
+        private System.Windows.Forms.Label lbTable;
+        private System.Windows.Forms.Button btnRemove;
     }
 }

@@ -15,6 +15,9 @@ namespace CDIO.GUI
         BL.Menu blMenu;
         DA.DA_Menu daMenu;
         private int Hienco;
+        private string tableID;
+        private string billID;
+        private string employeeID;
         public FrmOrder()
         {
             InitializeComponent();
@@ -23,16 +26,33 @@ namespace CDIO.GUI
             daMenu = new DA.DA_Menu();
         }
 
+        public FrmOrder(string id)
+        {
+            InitializeComponent();
+            FrmMenu f = new FrmMenu();
+            blMenu = new BL.Menu(f);
+            daMenu = new DA.DA_Menu();
+            this.employeeID = id;
+        }
+
         private void flowTable_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void FrmOrder_Load(object sender, EventArgs e)
+        public void loadForm()
         {
             loadDish();
             loadTable();
-            MessageBox.Show(listView1.Items.Count.ToString());
+            this.listView1.Items.Clear();
+        }
+
+        private void FrmOrder_Load(object sender, EventArgs e)
+        {
+            this.btnSwitchTable.Enabled = false;
+            this.btnPay.Enabled = false;
+            loadDish();
+            loadTable();
         }
         //load list table under button
         public void loadTable()
@@ -50,17 +70,63 @@ namespace CDIO.GUI
                     Width = DrinksWitdh,
                     Height = DrinksHeight
                 };
-                if(daMenu.getTableBill(item.Id) ==1)
+                if (daMenu.getTableBill(item.Id) == 1)
                     btn.Text = item.Id + Environment.NewLine + "In use";
                 else
                     btn.Text = item.Id + Environment.NewLine + "Empty";
                 //    btn.Image = global::Thefaceless.Properties.Resources.drink_2_icon;
                 btn.ForeColor = Color.Black;
                 //bắt sự kiện click cho các button
-                btn.Click += btn_Click;
+                btn.Click += btn_ClickTable;
                 btn.Tag = item;
+                btn.Name = "btnTable" + item.Id;
                 this.flowTable.Controls.Add(btn);
 
+            }
+        }
+
+        public string getDishName(int id)
+        {
+            List<DA.Dish> listDish = daMenu.getListDish();
+            for (int i = 0; i < listDish.Count; i++)
+                if (id.Equals(listDish[i].DishID))
+                    return listDish[i].DishName;
+            return "";
+        }
+
+        private void btn_ClickTable(object sender, EventArgs e)
+        {
+            this.btnSwitchTable.Enabled = true;
+            this.btnPay.Enabled = true;
+            tableID = ((sender as Button).Tag as DA.Table).Id;
+            lbTable.Text = "Table : " + tableID;
+            this.listView1.Items.Clear();
+            lbTotal.Text = "0";
+            if (daMenu.getTableBill(tableID) == 1)
+            {
+                this.billID = daMenu.getBillID(tableID);
+                DataTable dt = daMenu.getBillDetail(billID);
+                List<DA.Dish> listDish = daMenu.getListDish();
+                lbTotal.Text = "0";
+                foreach (DataRow row in dt.Rows)
+                {
+
+                    ListViewItem Ten = new ListViewItem(getDishName((int)row["DishID"]), 0);
+                    ListViewItem.ListViewSubItem SoLuong = new ListViewItem.ListViewSubItem(Ten,"" +(int)row["number"]);
+                    ListViewItem.ListViewSubItem Gia = new ListViewItem.ListViewSubItem(Ten, ""+(double)row["Price"]);
+                    double total = (int)row["number"] * (double)row["Price"];
+                    this.lbTotal.Text = (int.Parse(lbTotal.Text) + total).ToString();
+                    ListViewItem.ListViewSubItem Tong = new ListViewItem.ListViewSubItem(Ten, total.ToString());
+                    Ten.SubItems.Add(SoLuong);
+                    Ten.SubItems.Add(Gia);
+                    Ten.SubItems.Add(Tong);
+                    listView1.Items.Add(Ten);
+                }
+
+            }
+            else
+            {
+                billID = null;
             }
         }
 
@@ -93,72 +159,139 @@ namespace CDIO.GUI
 
         private void btn_Click(object sender, EventArgs e)
         {
-            List<DA.Dish> ld = daMenu.getListDish() ;
-            //lấy tên đồ uống
-            string DishName = ((sender as Button).Tag as DA.Dish).DishName;
-            int x;
-            int sl = 0;
-            //hiện form nhập số lượng
-            do
+            if (tableID == null)
             {
-                FrmInput fi = new FrmInput();
-                fi.ShowDialog();
-                x = fi.soluong;
-
-                foreach (DA.Dish items in ld)
+                MessageBox.Show("Vui lòng chọn bàn trước khi đặt món");
+            }
+            else
+            {
+                if (billID == null)
                 {
-                    if (DishName.Equals(items.DishName))
-                    {
-                        Hienco = items.Number;
-                        for (int i = 0; i < this.listView1.Items.Count; i++)
-                        {
-                            if (DishName.Equals(this.listView1.Items[i].SubItems[0].Text))
-                            {
-                                //lấy tổng số lượng order
-                                sl = int.Parse(this.listView1.Items[i].SubItems[1].Text) + x;
-                            }
-                        }
-                        if (x > Hienco || sl > Hienco)
-                            MessageBox.Show("So luong khong du,vui long nhap lai");
-                    }
+                    daMenu.createBill(tableID);
+                    billID = daMenu.getBillID();
+                    daMenu.saveTableBill(tableID,billID);
                 }
-            } while (x > Hienco || sl > Hienco);
-
-            if (x != 0)
-            {
-                Boolean isHave = false;
-                //duyệt trong danh sach đồ uống để lấy Tên đồ uống,số lượng và giá tiền
-                foreach (DA.Dish items in ld)
+                List<DA.Dish> ld = daMenu.getListDish();
+                //lấy tên đồ uống
+                string DishName = ((sender as Button).Tag as DA.Dish).DishName;
+                int x;
+                int sl = 0;
+                //hiện form nhập số lượng
+                do
                 {
-                    if (DishName.Equals(items.DishName))
+                    FrmInput fi = new FrmInput();
+                    fi.ShowDialog();
+                    x = fi.soluong;
+
+                    foreach (DA.Dish items in ld)
                     {
-                        for (int i = 0; i < this.listView1.Items.Count; i++)
-                            //kiểm tra xem món vừa gọi đã có trong bill chưa
-                            if (DishName.Equals(this.listView1.Items[i].SubItems[0].Text))
-                            {
-                                isHave = true;
-                                //có trong bill thì tăng số lượng + giá tiền lên
-                                this.listView1.Items[i].SubItems[1].Text = (int.Parse(this.listView1.Items[i].SubItems[1].Text) + x).ToString();
-                                this.lbTotal.Text = (int.Parse(this.lbTotal.Text) + x * items.Price).ToString();
-                                this.listView1.Items[i].SubItems[3].Text = (int.Parse(this.listView1.Items[i].SubItems[1].Text) * items.Price).ToString();
-                            }
-                        //chưa có thì thêm vào bill
-                        if (isHave == false)
+                        if (DishName.Equals(items.DishName))
                         {
-                            ListViewItem Ten = new ListViewItem(items.DishName, 0);
-                            ListViewItem.ListViewSubItem SoLuong = new ListViewItem.ListViewSubItem(Ten, x.ToString());
-                            ListViewItem.ListViewSubItem Gia = new ListViewItem.ListViewSubItem(Ten, items.Price.ToString());
-                            double total = x * items.Price;
-                            this.lbTotal.Text = (int.Parse(lbTotal.Text) + total).ToString();
-                            ListViewItem.ListViewSubItem Tong = new ListViewItem.ListViewSubItem(Ten, total.ToString());
-                            Ten.SubItems.Add(SoLuong);
-                            Ten.SubItems.Add(Gia);
-                            Ten.SubItems.Add(Tong);
-                            listView1.Items.Add(Ten);
+                            Hienco = items.Number;
+                            for (int i = 0; i < this.listView1.Items.Count; i++)
+                            {
+                                if (DishName.Equals(this.listView1.Items[i].SubItems[0].Text))
+                                {
+                                    //lấy tổng số lượng order
+                                    sl = int.Parse(this.listView1.Items[i].SubItems[1].Text) + x;
+                                }
+                            }
+                            if (x > Hienco || sl > Hienco)
+                                MessageBox.Show("So luong khong du,vui long nhap lai");
+                        }
+                    }
+                } while (x > Hienco || sl > Hienco);
+
+                if (x != 0)
+                {
+                    Boolean isHave = false;
+                    //duyệt trong danh sach đồ uống để lấy Tên đồ uống,số lượng và giá tiền
+                    foreach (DA.Dish items in ld)
+                    {
+                        if (DishName.Equals(items.DishName))
+                        {
+                            for (int i = 0; i < this.listView1.Items.Count; i++)
+                                //kiểm tra xem món vừa gọi đã có trong bill chưa
+                                if (DishName.Equals(this.listView1.Items[i].SubItems[0].Text))
+                                {
+                                    isHave = true;
+                                    //có trong bill thì tăng số lượng + giá tiền lên
+                                    this.listView1.Items[i].SubItems[1].Text = (int.Parse(this.listView1.Items[i].SubItems[1].Text) + x).ToString();
+                                    this.lbTotal.Text = (int.Parse(this.lbTotal.Text) + x * items.Price).ToString();
+                                    this.listView1.Items[i].SubItems[3].Text = (int.Parse(this.listView1.Items[i].SubItems[1].Text) * items.Price).ToString();
+                                    daMenu.updateBillDetail(this.billID, DishName, x, items.Price, Hienco);
+                                }
+                            //chưa có thì thêm vào bill
+                            if (isHave == false)
+                            {
+                                ListViewItem Ten = new ListViewItem(items.DishName, 0);
+                                ListViewItem.ListViewSubItem SoLuong = new ListViewItem.ListViewSubItem(Ten, x.ToString());
+                                ListViewItem.ListViewSubItem Gia = new ListViewItem.ListViewSubItem(Ten, items.Price.ToString());
+                                double total = x * items.Price;
+                                this.lbTotal.Text = (int.Parse(lbTotal.Text) + total).ToString();
+                                ListViewItem.ListViewSubItem Tong = new ListViewItem.ListViewSubItem(Ten, total.ToString());
+                                Ten.SubItems.Add(SoLuong);
+                                Ten.SubItems.Add(Gia);
+                                Ten.SubItems.Add(Tong);
+                                listView1.Items.Add(Ten);
+                                daMenu.addBillDetail(this.billID, DishName, x, items.Price, Hienco);
+                            }
                         }
                     }
                 }
             }
+            loadTable();
+            loadDish();
+        }
+
+        private void btnSwitchTable_Click(object sender, EventArgs e)
+        {
+            FrmSwitchTable f = new FrmSwitchTable(tableID);
+            f.ShowDialog();
+            this.loadForm();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("pay bill?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                this.listView1.Items.Clear();
+                this.lbTotal.Text = "0";
+                daMenu.updateBill(billID,1,1);
+                daMenu.deleteTableBill(billID);
+                FrmInputCus fc = new FrmInputCus();
+                FrmBill f = new FrmBill(billID, fc.cusID, employeeID);
+                f.Show();
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            for (int i = 0;i<= listView1.SelectedIndices.Count - 1; i++)
+            {
+                //trừ tiền
+                this.lbTotal.Text = (int.Parse(this.lbTotal.Text) - int.Parse(this.listView1.Items[this.listView1.SelectedIndices[i]].SubItems[3].Text)).ToString();
+                //xóa items
+      
+                string dishID = getDishID(this.listView1.Items[this.listView1.SelectedIndices[i]].SubItems[0].Text);
+                this.listView1.Items.RemoveAt(this.listView1.SelectedIndices[i]);
+                daMenu.deleteBillDetail(billID, dishID);
+            }
+            if(this.listView1.Items.Count ==0)
+            {
+                daMenu.deleteTableBill(billID) ;
+            }
+            loadDish();
+            loadTable();
+        }
+
+        public string getDishID(string name)
+        {
+            List<DA.Dish> listDish = daMenu.getListDish();
+            for (int i = 0; i < listDish.Count; i++)
+                if (name.Equals(listDish[i].DishName))
+                    return listDish[i].DishID.ToString();
+            return "";
         }
     }
 }

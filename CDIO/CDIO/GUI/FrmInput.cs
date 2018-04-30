@@ -16,15 +16,17 @@ namespace CDIO.GUI
         public FrmInput()
         {
             InitializeComponent();
-
-
         }
 
         //kiểm tra số lượng nhập vào và chuyển qua form Main
 
         private void btnOkay_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("abc");
+            inputForm();
+        }
+
+        public void inputForm()
+        {
             BL.Commen g = new BL.Commen();
             if (txtInput.Text == "")
             {

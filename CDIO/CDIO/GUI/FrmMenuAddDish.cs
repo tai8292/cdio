@@ -18,6 +18,7 @@ namespace CDIO.GUI
         {
             InitializeComponent();
             bl = new BL.BL_AddDish(this);
+            this.picture.Image = Image.FromFile("D:/projectCDIO/cdio/CDIO/CDIO/food.png");
         }
 
         private void FrmMenuAddDish_Load(object sender, EventArgs e)
@@ -33,7 +34,17 @@ namespace CDIO.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(bl.saveDish().ToString());
+            if (txtName.Text == "" || txtNumber.Text == "" || txtPrice.Text == "")
+            {
+                MessageBox.Show("You must input all field");
+            }
+            else
+            {
+                bl.saveDish();
+                MessageBox.Show("Add dish successful");
+                this.Close();
+            }
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -46,12 +57,6 @@ namespace CDIO.GUI
         private void btnCancer_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void FrmMenuAddDish_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (DialogResult.No == MessageBox.Show("Do you want to cancer?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-                e.Cancel = true;
         }
 
         private void txtNumber_TextChanged(object sender, EventArgs e)

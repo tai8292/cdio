@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,29 @@ namespace CDIO.DA
         {
             string sql = "update USERNAME set Password ='" + 123456 + "' where Username ='" + text + "'";
             dp.ExcuNonQuery(sql);
+        }
+
+        public bool checkUser(string username,string pass)
+        {
+            string sql = "select count (*) from USERNAME where Username ='" + username + "' AND Password =@pass";
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@pass";
+            param.Value = pass;
+            int kq = dp.ExcuScalar(sql, param);
+            if (kq == 1)
+                return true;
+            return false;
+        }
+
+        public string getEmployeeID(string username)
+        {
+            string sql = "select EmployeeID from USERNAME where Username ='" + username + "'";
+            DataTable dt = dp.getDataTable(sql);
+            foreach(DataRow r in dt.Rows)
+            {
+                return "" + (int)r["EmployeeID"];
+            }
+            return "";
         }
     }
 }

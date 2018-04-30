@@ -69,9 +69,9 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(126, 7);
+            this.txtName.Location = new System.Drawing.Point(145, 7);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(232, 26);
+            this.txtName.Size = new System.Drawing.Size(213, 26);
             this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -126,10 +126,11 @@
             // 
             // cbxEmployeeID
             // 
+            this.cbxEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEmployeeID.FormattingEnabled = true;
-            this.cbxEmployeeID.Location = new System.Drawing.Point(126, 8);
+            this.cbxEmployeeID.Location = new System.Drawing.Point(145, 8);
             this.cbxEmployeeID.Name = "cbxEmployeeID";
-            this.cbxEmployeeID.Size = new System.Drawing.Size(232, 21);
+            this.cbxEmployeeID.Size = new System.Drawing.Size(213, 28);
             this.cbxEmployeeID.TabIndex = 0;
             // 
             // label1
@@ -138,9 +139,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "EmployeeID :";
+            this.label1.Text = "Employee Name :";
             // 
             // FrmAddUser
             // 

@@ -1,6 +1,6 @@
 ﻿namespace CDIO.GUI
 {
-    partial class FrmInput
+    partial class FrmInputCus
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnOkay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtInput = new System.Windows.Forms.NumericUpDown();
+            this.txtInput = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInput)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,37 +53,36 @@
             this.btnOkay.TabIndex = 2;
             this.btnOkay.Text = "Okay";
             this.btnOkay.UseVisualStyleBackColor = true;
-            this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click_1);
+            this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 6);
+            this.label1.Location = new System.Drawing.Point(60, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(159, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập số lượng:";
+            this.label1.Text = "Input customer ID:";
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(72, 32);
+            this.txtInput.Location = new System.Drawing.Point(56, 27);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(135, 20);
+            this.txtInput.Size = new System.Drawing.Size(166, 20);
             this.txtInput.TabIndex = 3;
             // 
-            // FrmInput
+            // FrmInputCus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 105);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmInput";
+            this.Name = "FrmInputCus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmInput";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,6 +92,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOkay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown txtInput;
+        private System.Windows.Forms.TextBox txtInput;
     }
 }

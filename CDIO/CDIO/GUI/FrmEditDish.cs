@@ -42,7 +42,16 @@ namespace CDIO.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            editDish.update();
+            if (txtName.Text == "" || txtNumber.Text == "" || txtPrice.Text == "")
+            {
+                MessageBox.Show("You must input all field");
+            }
+            else
+            {
+                editDish.update();
+                MessageBox.Show("Edit dish successful");
+                this.Close();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
