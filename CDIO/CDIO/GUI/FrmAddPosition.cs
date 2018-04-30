@@ -64,6 +64,9 @@ namespace CDIO.GUI
                 this.Close();
         }
 
+<<<<<<< HEAD
+       
+=======
 
       /*  private void txtID_Validated(object sender, EventArgs e)
         {
@@ -110,5 +113,6 @@ namespace CDIO.GUI
                 this.btnSave.Enabled = true;
 
         }*/
+>>>>>>> master
     }
 }

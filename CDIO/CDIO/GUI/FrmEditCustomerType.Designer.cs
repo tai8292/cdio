@@ -62,6 +62,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 2;
+            this.txtName.Validated += new System.EventHandler(this.txtName_Validated);
             // 
             // label3
             // 
@@ -81,6 +82,7 @@
             this.btnCancer.TabIndex = 39;
             this.btnCancer.Text = "Cancel";
             this.btnCancer.UseVisualStyleBackColor = true;
+            this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
             // 
             // btnClear
             // 
@@ -90,6 +92,7 @@
             this.btnClear.TabIndex = 38;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 

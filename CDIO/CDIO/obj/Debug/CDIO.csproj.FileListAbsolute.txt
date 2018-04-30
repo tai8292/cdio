@@ -111,6 +111,36 @@ D:\chetmeroi\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
 D:\chetmeroi\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
 D:\chetmeroi\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
 D:\chetmeroi\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
+<<<<<<< HEAD
+D:\cdio2\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
+D:\cdio2\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
+D:\cdio2\cdio2\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csprojResolveAssemblyReference.cache
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.FrmLogin.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddCustomerType.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddUser.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddPosition.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmAddEmployee.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmCustomer.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmCustomerType.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditCustomerType.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditDish.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditPosition.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEditEmployee.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmEmployee.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmInput.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMain.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenu.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmMenuAddDish.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmOrder.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmPosition.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.GUI.FrmUser.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.Properties.Resources.resources
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.cache
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
+D:\cdio2\cdio2\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
+=======
 D:\CDIO397\cdio\CDIO\CDIO\bin\Debug\CDIO.exe.config
 D:\CDIO397\cdio\CDIO\CDIO\bin\Debug\CDIO.exe
 D:\CDIO397\cdio\CDIO\CDIO\bin\Debug\CDIO.pdb
@@ -139,3 +169,4 @@ D:\CDIO397\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.GenerateResource.cache
 D:\CDIO397\cdio\CDIO\CDIO\obj\Debug\CDIO.csproj.CoreCompileInputs.cache
 D:\CDIO397\cdio\CDIO\CDIO\obj\Debug\CDIO.exe
 D:\CDIO397\cdio\CDIO\CDIO\obj\Debug\CDIO.pdb
+>>>>>>> master
