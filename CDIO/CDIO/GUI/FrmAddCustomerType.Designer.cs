@@ -59,9 +59,11 @@
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(126, 10);
+            this.txtID.MaxLength = 10;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(232, 26);
-            this.txtID.TabIndex = 2;
+            this.txtID.TabIndex = 0;
+            this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
             // 
             // label1
             // 
@@ -98,7 +100,7 @@
             this.txtPoint.Location = new System.Drawing.Point(126, 10);
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.Size = new System.Drawing.Size(232, 26);
-            this.txtPoint.TabIndex = 2;
+            this.txtPoint.TabIndex = 3;
             // 
             // label2
             // 
@@ -115,25 +117,27 @@
             this.btnCancer.Location = new System.Drawing.Point(306, 272);
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(89, 36);
-            this.btnCancer.TabIndex = 32;
+            this.btnCancer.TabIndex = 6;
             this.btnCancer.Text = "Cancel";
             this.btnCancer.UseVisualStyleBackColor = true;
+            this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
             // 
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(156, 272);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 36);
-            this.btnClear.TabIndex = 31;
+            this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(30, 272);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(89, 36);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -151,9 +155,11 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 3;
+            this.txtName.Validated += new System.EventHandler(this.txtName_Validated);
             // 
             // label3
             // 

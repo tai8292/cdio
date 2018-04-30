@@ -12,7 +12,7 @@ namespace CDIO.GUI
 {
     public partial class FrmOrder : Form
     {
-        BL.Menu blMenu;
+        /*BL.Menu blMenu;
         DA.DA_Menu daMenu;
         private int Hienco;
         private string tableID;
@@ -240,6 +240,7 @@ namespace CDIO.GUI
                     }
                 }
             }
+<<<<<<< HEAD
             loadTable();
             loadDish();
         }
@@ -293,5 +294,8 @@ namespace CDIO.GUI
                     return listDish[i].DishID.ToString();
             return "";
         }
+=======
+        }*/
+>>>>>>> master
     }
 }

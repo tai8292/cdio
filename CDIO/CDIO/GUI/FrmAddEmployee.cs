@@ -16,7 +16,7 @@ namespace CDIO.GUI
         public FrmAddEmployee()
         {
             InitializeComponent();
-            employee = new BL.BL_AddEmployee(this);
+            employee = new BL.BL_AddEmployee(this); 
         }
 
 
@@ -28,7 +28,20 @@ namespace CDIO.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            employee.addEmployee();   
+            if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
+            {
+                if (txtPhone.Text.All(char.IsDigit) == true)
+                {
+                    employee.addEmployee();
+                    MessageBox.Show("You have successfully add a new employee !");
+                }
+                else {
+                    MessageBox.Show("Phone must be a number !");
+                }
+            }
+            else {
+                MessageBox.Show("All field must not be empty !");
+            }
         }
 
         private void btnCancer_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace CDIO.BL
 
         public void editEmployee()
         {
-            employee.editEmployee(frm.txtID.Text, frm.txtName.Text, frm.cbGender.SelectedValue.ToString(), frm.txtAddress.Text, frm.txtPhone.Text, frm.pickerBirthday.Value, frm.cbPosition.SelectedValue.ToString());
+            employee.editEmployee(frm.txtID.Text, frm.txtName.Text, frm.cbGender.SelectedValue.ToString(), frm.txtAddress.Text, frm.txtPhone.Text, frm.pickerBirthday.Value.ToShortDateString(), frm.cbPosition.SelectedValue.ToString());
         }
     }
 }
