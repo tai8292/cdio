@@ -68,6 +68,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(232, 26);
             this.txtID.TabIndex = 2;
+           // this.txtID.Click += new System.EventHandler(this.txtID_Click);
             // 
             // label2
             // 

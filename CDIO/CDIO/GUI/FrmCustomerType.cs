@@ -52,6 +52,9 @@ namespace CDIO.GUI
                 this.txtPoint.Clear();
             }
         }
+        
+           
+
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
