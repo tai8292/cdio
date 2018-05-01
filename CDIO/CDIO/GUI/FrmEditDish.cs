@@ -105,7 +105,8 @@ namespace CDIO.GUI
         private void btnChoose_Click(object sender, EventArgs e)
         {
             open.ShowDialog();
-            this.picture.Image = Image.FromFile(open.FileName);
+            if(open.FileName != null)
+                this.picture.Image = Image.FromFile(open.FileName);
         }
     }
 }

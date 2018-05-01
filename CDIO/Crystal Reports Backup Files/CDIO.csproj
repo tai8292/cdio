@@ -32,10 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +55,7 @@
     <Compile Include="BL\BL_AddCustomer.cs" />
     <Compile Include="BL\Bl_AddCustomerType.cs" />
     <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\BL_BillManagement.cs" />
     <Compile Include="BL\BL_Customer.cs" />
     <Compile Include="BL\Bl_CustomerType.cs" />
     <Compile Include="BL\BL_EditCustomer.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="BL\Menu.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DA\DataProvider.cs" />
+    <Compile Include="DA\DA_BillManagement.cs" />
     <Compile Include="DA\DA_Customer.cs" />
     <Compile Include="DA\DA_Customertype.cs" />
     <Compile Include="DA\DA_Employee.cs" />
@@ -131,6 +133,12 @@
     </Compile>
     <Compile Include="GUI\FrmBill.Designer.cs">
       <DependentUpon>FrmBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmBillManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmBillManagement.Designer.cs">
+      <DependentUpon>FrmBillManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmCustomer.cs">
       <SubType>Form</SubType>
@@ -262,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmBill.resx">
       <DependentUpon>FrmBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmBillManagement.resx">
+      <DependentUpon>FrmBillManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
