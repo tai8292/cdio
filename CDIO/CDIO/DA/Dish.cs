@@ -24,7 +24,7 @@ namespace CDIO.DA
             this.number = (int)row[3];
             this.price = (double)row["p"];
 
-            //this.picture = commen.byteToImage((byte[])row["Picture"]);
+            this.picture = commen.byteToImage((byte[])row["Picture"]);
         }
 
 
