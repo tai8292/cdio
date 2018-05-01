@@ -39,7 +39,7 @@
             this.reportBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportBill.Location = new System.Drawing.Point(0, 0);
             this.reportBill.Name = "reportBill";
-            this.reportBill.Size = new System.Drawing.Size(906, 680);
+            this.reportBill.Size = new System.Drawing.Size(1117, 590);
             this.reportBill.TabIndex = 0;
             this.reportBill.Load += new System.EventHandler(this.reportBill_Load);
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 680);
+            this.ClientSize = new System.Drawing.Size(1117, 590);
             this.Controls.Add(this.reportBill);
             this.Name = "FrmBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

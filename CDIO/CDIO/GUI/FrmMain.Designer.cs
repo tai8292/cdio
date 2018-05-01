@@ -37,6 +37,7 @@
             this.btnMenuDish = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnBill = new System.Windows.Forms.Button();
             this.panelMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenuStrip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenuStrip.Controls.Add(this.btnBill);
             this.panelMenuStrip.Controls.Add(this.btnUser);
             this.panelMenuStrip.Controls.Add(this.btnCustomerType);
             this.panelMenuStrip.Controls.Add(this.btnCustomer);
@@ -136,6 +138,16 @@
             this.panelMain.Size = new System.Drawing.Size(1133, 610);
             this.panelMain.TabIndex = 7;
             // 
+            // btnBill
+            // 
+            this.btnBill.Location = new System.Drawing.Point(915, 6);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(83, 33);
+            this.btnBill.TabIndex = 7;
+            this.btnBill.Text = "Bill";
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.Button btnMenuDish;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button btnBill;
     }
 }

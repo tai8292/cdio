@@ -31,7 +31,7 @@ namespace CDIO.GUI
         private void reportBill_Load(object sender, EventArgs e)
         {
             //tạo đối tượng và đưa dữ liệu và dataBill
-            DataBillTableAdapters.BILLTableAdapter bill = new DataBillTableAdapters.BILLTableAdapter();
+            /*DataBillTableAdapters.BILLTableAdapter bill = new DataBillTableAdapters.BILLTableAdapter();
             DataBillTableAdapters.BILLDETAILTableAdapter billDetail = new DataBillTableAdapters.BILLDETAILTableAdapter();
             DataBillTableAdapters.DISHTableAdapter dish = new DataBillTableAdapters.DISHTableAdapter();
             DataBillTableAdapters.CUSTOMERTableAdapter cus = new DataBillTableAdapters.CUSTOMERTableAdapter();
@@ -47,7 +47,7 @@ namespace CDIO.GUI
             rpBill r = new rpBill();
             //đưa dữ liệu từ databill và CystalReport
             r.SetDataSource(data);
-            this.reportBill.ReportSource = r;
+            this.reportBill.ReportSource = r;*/
         }
 
     }
