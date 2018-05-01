@@ -48,6 +48,7 @@
     <Compile Include="BL\BL_AddCustomer.cs" />
     <Compile Include="BL\Bl_AddCustomerType.cs" />
     <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\BL_Bill.cs" />
     <Compile Include="BL\BL_Customer.cs" />
     <Compile Include="BL\Bl_CustomerType.cs" />
     <Compile Include="BL\BL_EditCustomer.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="BL\Menu.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DA\DataProvider.cs" />
+    <Compile Include="DA\DA_Bill.cs" />
     <Compile Include="DA\DA_Customer.cs" />
     <Compile Include="DA\DA_Customertype.cs" />
     <Compile Include="DA\DA_Employee.cs" />
@@ -109,6 +111,12 @@
     </Compile>
     <Compile Include="GUI\FrmAddEmployee.Designer.cs">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmBill.Designer.cs">
+      <DependentUpon>FrmBill.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmCustomer.cs">
       <SubType>Form</SubType>
@@ -219,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmAddEmployee.resx">
       <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmBill.resx">
+      <DependentUpon>FrmBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>

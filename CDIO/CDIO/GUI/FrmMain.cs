@@ -71,5 +71,11 @@ namespace CDIO.GUI
             FrmUser f = new FrmUser();
             nhungForm(f);
         }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            FrmBill f = new FrmBill();
+            nhungForm(f);
+        }
     }
 }
