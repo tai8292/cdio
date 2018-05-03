@@ -152,6 +152,12 @@
     <Compile Include="GUI\FrmCustomerType.Designer.cs">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmDeleteBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmDeleteBill.Designer.cs">
+      <DependentUpon>FrmDeleteBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomerType.resx">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmDeleteBill.resx">
+      <DependentUpon>FrmDeleteBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEditCustomer.resx">
       <DependentUpon>FrmEditCustomer.cs</DependentUpon>

@@ -34,7 +34,7 @@ namespace CDIO.GUI
             daMenu = new DA.DA_Menu();
             this.employeeID = id;
         }
-
+        
         public void loadForm()
         {
             loadDish();
@@ -49,6 +49,7 @@ namespace CDIO.GUI
             loadDish();
             loadTable();
         }
+        
         //load list table under button
         public void loadTable()
         {

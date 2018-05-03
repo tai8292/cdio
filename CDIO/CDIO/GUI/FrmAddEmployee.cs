@@ -13,6 +13,7 @@ namespace CDIO.GUI
     public partial class FrmAddEmployee : Form
     {
         BL.BL_AddEmployee employee;
+        BL.Commen commen = new BL.Commen();
         public FrmAddEmployee()
         {
             InitializeComponent();
@@ -30,16 +31,24 @@ namespace CDIO.GUI
         {
             if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
             {
-                if (txtPhone.Text.All(char.IsDigit) == true)
+                if (!commen.checkAlphaNumberic(txtName.Text) || !commen.checkAlphaNumberic(txtName.Text) || !commen.checkAlphaNumberic(txtAddress.Text))
                 {
-                    employee.addEmployee();
-                    MessageBox.Show("You have successfully add a new employee !");
+                    MessageBox.Show("Can not contain special character");
                 }
                 else {
-                    MessageBox.Show("Phone must be a number !");
-                }
+                    if (txtPhone.Text.All(char.IsDigit) == true)
+                    {
+                        employee.addEmployee();
+                        MessageBox.Show("You have successfully add a new employee !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Phone must be a number !");
+                    }
+                }             
             }
-            else {
+            else
+            {
                 MessageBox.Show("All field must not be empty !");
             }
         }

@@ -11,7 +11,6 @@ namespace CDIO.BL
     {
         GUI.FrmBillManagement frm;
         DA.DA_BillManagement bill;
-        string id;
         public BL_BillManagement(GUI.FrmBillManagement frm)
         {
             this.frm = frm;
@@ -26,14 +25,8 @@ namespace CDIO.BL
             frm.txtDate.Text = frm.dataGridView1.Rows[index].Cells[3].Value.ToString();
             frm.txtTotal.Text = frm.dataGridView1.Rows[index].Cells[4].Value.ToString();
             frm.dataGridView2.DataSource = bill.getDataTableBillDetail(frm.txtID.Text);
-            frm.dataGridView2.Columns["ID"].Visible = false;
         }
 
-        public void clickDataGridDetail(int index)
-        {
-            this.id = frm.dataGridView2.Rows[index].Cells[0].Value.ToString();
-            frm.btnDelete.Enabled = true;
-        }
 
         public void loadForm()
         {
@@ -45,8 +38,6 @@ namespace CDIO.BL
             frm.dataGridView1.Columns["TableID"].Visible = false;
         }
 
-        public void delete() {
-            bill.delete(this.id);
-        }
+
     }
 }

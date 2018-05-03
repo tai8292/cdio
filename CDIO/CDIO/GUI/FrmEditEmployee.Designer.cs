@@ -33,6 +33,7 @@
             this.cbPosition = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pickerBirthday = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pickerBirthday = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -109,6 +109,14 @@
             this.panel1.Size = new System.Drawing.Size(365, 41);
             this.panel1.TabIndex = 5;
             // 
+            // pickerBirthday
+            // 
+            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickerBirthday.Location = new System.Drawing.Point(126, 5);
+            this.pickerBirthday.Name = "pickerBirthday";
+            this.pickerBirthday.Size = new System.Drawing.Size(232, 26);
+            this.pickerBirthday.TabIndex = 5;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -123,6 +131,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 2;
@@ -169,6 +178,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(126, 10);
+            this.txtPhone.MaxLength = 12;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
@@ -196,6 +206,7 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(126, 10);
+            this.txtAddress.MaxLength = 100;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
@@ -285,14 +296,6 @@
             this.label8.Size = new System.Drawing.Size(30, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = "ID:";
-            // 
-            // pickerBirthday
-            // 
-            this.pickerBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickerBirthday.Location = new System.Drawing.Point(126, 5);
-            this.pickerBirthday.Name = "pickerBirthday";
-            this.pickerBirthday.Size = new System.Drawing.Size(232, 26);
-            this.pickerBirthday.TabIndex = 5;
             // 
             // FrmEditEmployee
             // 
