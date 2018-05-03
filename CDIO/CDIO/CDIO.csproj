@@ -32,10 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +55,7 @@
     <Compile Include="BL\BL_AddCustomer.cs" />
     <Compile Include="BL\Bl_AddCustomerType.cs" />
     <Compile Include="BL\BL_AddDish.cs" />
+    <Compile Include="BL\BL_AddTable.cs" />
     <Compile Include="BL\BL_BillManagement.cs" />
     <Compile Include="BL\BL_Customer.cs" />
     <Compile Include="BL\Bl_CustomerType.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="BL\BL_EditPosition.cs" />
     <Compile Include="BL\BL_AddEmployee.cs" />
     <Compile Include="BL\BL_EditEmployee.cs" />
+    <Compile Include="BL\BL_DeleteTable.cs" />
     <Compile Include="BL\BL_Kind.cs" />
     <Compile Include="BL\BL_Position.cs" />
     <Compile Include="BL\Commen.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="DA\DA_Kind.cs" />
     <Compile Include="DA\DA_Menu.cs" />
     <Compile Include="DA\DA_Table.cs" />
+    <Compile Include="DA\DA_TheTable.cs" />
     <Compile Include="DA\DA_User.cs" />
     <Compile Include="DA\DA_Position.cs" />
     <Compile Include="DA\Dish.cs" />
@@ -89,9 +92,6 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DataBill.cs">
-      <DependentUpon>DataBill.xsd</DependentUpon>
     </Compile>
     <Compile Include="GUI\DataBill.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="GUI\FrmAddCustomerType.Designer.cs">
       <DependentUpon>FrmAddCustomerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddTable.Designer.cs">
+      <DependentUpon>FrmAddTable.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmAddUser.cs">
       <SubType>Form</SubType>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="GUI\FrmDeleteBill.Designer.cs">
       <DependentUpon>FrmDeleteBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmDeleteTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmDeleteTable.Designer.cs">
+      <DependentUpon>FrmDeleteTable.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmEditCustomer.cs">
       <SubType>Form</SubType>
@@ -265,6 +277,9 @@
     <EmbeddedResource Include="GUI\FrmAddCustomerType.resx">
       <DependentUpon>FrmAddCustomerType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddTable.resx">
+      <DependentUpon>FrmAddTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmDeleteBill.resx">
       <DependentUpon>FrmDeleteBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmDeleteTable.resx">
+      <DependentUpon>FrmDeleteTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmEditCustomer.resx">
       <DependentUpon>FrmEditCustomer.cs</DependentUpon>

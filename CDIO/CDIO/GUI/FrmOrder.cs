@@ -289,6 +289,20 @@ namespace CDIO.GUI
                     return listDish[i].DishID.ToString();
             return "";
         }
+
+        private void btnAddTB_Click(object sender, EventArgs e)
+        {
+            FrmAddTable frm = new FrmAddTable();
+            frm.ShowDialog();
+            this.loadForm();
+        }
+
+        private void btnDeleteTB_Click(object sender, EventArgs e)
+        {
+            FrmDeleteTable frm = new FrmDeleteTable();
+            frm.ShowDialog();
+            this.loadForm();
+        }
     }
 }
 

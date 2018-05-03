@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
@@ -47,6 +47,8 @@
             this.flowDish = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTable = new System.Windows.Forms.Panel();
             this.flowTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnDeleteTB = new System.Windows.Forms.Button();
+            this.btnAddTB = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.panelDish.SuspendLayout();
@@ -56,6 +58,8 @@
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.btnDeleteTB);
+            this.panelMain.Controls.Add(this.btnAddTB);
             this.panelMain.Controls.Add(this.panelAction);
             this.panelMain.Controls.Add(this.panelDish);
             this.panelMain.Controls.Add(this.panelMenu);
@@ -123,9 +127,9 @@
             this.panelDish.Controls.Add(this.btnRemove);
             this.panelDish.Controls.Add(this.lbTable);
             this.panelDish.Controls.Add(this.listView1);
-            this.panelDish.Location = new System.Drawing.Point(828, 3);
+            this.panelDish.Location = new System.Drawing.Point(828, 43);
             this.panelDish.Name = "panelDish";
-            this.panelDish.Size = new System.Drawing.Size(256, 455);
+            this.panelDish.Size = new System.Drawing.Size(256, 415);
             this.panelDish.TabIndex = 1;
             // 
             // btnRemove
@@ -157,7 +161,7 @@
             this.Total});
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(3, 45);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(250, 407);
@@ -214,6 +218,26 @@
             this.flowTable.Size = new System.Drawing.Size(813, 270);
             this.flowTable.TabIndex = 0;
             // 
+            // btnDeleteTB
+            // 
+            this.btnDeleteTB.Location = new System.Drawing.Point(957, 3);
+            this.btnDeleteTB.Name = "btnDeleteTB";
+            this.btnDeleteTB.Size = new System.Drawing.Size(124, 34);
+            this.btnDeleteTB.TabIndex = 4;
+            this.btnDeleteTB.Text = "Delete Table";
+            this.btnDeleteTB.UseVisualStyleBackColor = true;
+            this.btnDeleteTB.Click += new System.EventHandler(this.btnDeleteTB_Click);
+            // 
+            // btnAddTB
+            // 
+            this.btnAddTB.Location = new System.Drawing.Point(826, 3);
+            this.btnAddTB.Name = "btnAddTB";
+            this.btnAddTB.Size = new System.Drawing.Size(125, 34);
+            this.btnAddTB.TabIndex = 5;
+            this.btnAddTB.Text = "Add Table";
+            this.btnAddTB.UseVisualStyleBackColor = true;
+            this.btnAddTB.Click += new System.EventHandler(this.btnAddTB_Click);
+            // 
             // FrmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,5 +277,7 @@
         private System.Windows.Forms.ColumnHeader Total;
         private System.Windows.Forms.Label lbTable;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnDeleteTB;
+        private System.Windows.Forms.Button btnAddTB;
     }
 }
