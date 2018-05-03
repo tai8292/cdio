@@ -59,5 +59,21 @@ namespace CDIO.DA
             }
             return "";
         }
+
+        public string getPassword(string empID)
+        {
+            string sql = "select Password from USERNAME where EmployeeID = '" + empID + "'";
+            DataTable dt = new DataTable();
+            dt = dp.getDataTable(sql);
+            foreach (DataRow r in dt.Rows)
+                return (string)r["Password"];
+            return "";
+        }
+
+        public void updatePassword(string empID,string newPass)
+        {
+            string sql = "update USERNAME set Password ='" + newPass + "' where EmployeeID = '" + empID + "'";
+            dp.ExcuNonQuery(sql);
+        }
     }
 }
