@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelAction = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
@@ -85,6 +85,7 @@
             this.btnPay.TabIndex = 4;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnSwitchTable
             // 
@@ -95,6 +96,7 @@
             this.btnSwitchTable.TabIndex = 3;
             this.btnSwitchTable.Text = "Switch Table";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // lbTotal
             // 
@@ -134,7 +136,7 @@
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
-            //this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // lbTable
             // 
@@ -155,7 +157,7 @@
             this.Total});
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(3, 45);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(250, 407);
@@ -220,6 +222,7 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FrmOrder";
             this.Text = "FrmOrder";
+            this.Load += new System.EventHandler(this.FrmOrder_Load);
             this.panelMain.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
             this.panelAction.PerformLayout();

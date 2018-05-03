@@ -14,7 +14,7 @@ namespace CDIO.DA
         int dishID;
         int number;
         double price;
-        //Image picture;
+        Image picture;
         BL.Commen commen = new BL.Commen();
         public Dish(DataRow row)
         {
@@ -28,7 +28,7 @@ namespace CDIO.DA
         }
 
 
-        /*public string DishName { get => dishName; set => dishName = value; }
+        public string DishName { get => dishName; set => dishName = value; }
         public string KindID { get => kindID; set => kindID = value; }
         public int Number { get => number; set => number = value; }
         public double Price { get => price; set => price = value; }
@@ -37,6 +37,6 @@ namespace CDIO.DA
         {
             get => dishID; set => dishID = value;
 
-        }*/
+        }
     }
 }
