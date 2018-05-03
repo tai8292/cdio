@@ -34,23 +34,12 @@ namespace CDIO.GUI
             }
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.RowIndex < this.dataGridView1.Rows.Count)
-            {
-                bill.clickDataGridDetail(e.RowIndex);
-            }
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete this ? ", "Noted", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-            {
-                bill.delete();
-                bill.loadForm();
-                btnDelete.Enabled = false;
-                MessageBox.Show("Delete successfully !");
-            }
+            FrmDeleteBill frm = new FrmDeleteBill();
+            frm.ShowDialog();
+            bill.loadForm();
         }
     }
 }

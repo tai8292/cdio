@@ -21,15 +21,17 @@ namespace CDIO.DA
         }
         public DataTable getDataTableBillDetail(string id)
         {
-            string sql = "select bd.ID,d.DishName,bd.Number,bd.Price from BILLDETAIL bd,DISH d where bd.BILLID='" + id + "' and bd.DishID=d.DishID ";
+            string sql = "select d.DishName,bd.Number,bd.Price from BILLDETAIL bd,DISH d where bd.BILLID='" + id + "' and bd.DishID=d.DishID ";
             DataTable dt = new DataTable();
             dt = dp.getDataTable(sql);
             return dt;
         }
 
-        public void delete(string id) {
-            string sql = "Delete from BILLDETAIL where ID='"+id+"'";
+        public void deleteDetail(string fromdate, string todate) {
+            string sql = "delete BILLDETAIL where BillID in (select ID from BILL where CreateDate between '"+fromdate+"' and '"+todate+"')";
             dp.ExcuNonQuery(sql);
-        }
+            string sql1 = "delete BILL where CreateDate between '" + fromdate + "' and '" + todate + "'";
+            dp.ExcuNonQuery(sql1);
+        }     
     }
 }

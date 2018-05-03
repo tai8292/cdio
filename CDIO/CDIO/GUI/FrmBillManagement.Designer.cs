@@ -136,6 +136,7 @@
             // 
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDate.Location = new System.Drawing.Point(114, 7);
+            this.txtDate.MaxLength = 10;
             this.txtDate.Name = "txtDate";
             this.txtDate.ReadOnly = true;
             this.txtDate.Size = new System.Drawing.Size(180, 26);
@@ -189,9 +190,8 @@
             this.dataGridView2.Location = new System.Drawing.Point(551, 206);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(554, 323);
+            this.dataGridView2.Size = new System.Drawing.Size(554, 372);
             this.dataGridView2.TabIndex = 5;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // label5
             // 
@@ -215,10 +215,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(770, 535);
+            this.btnDelete.Location = new System.Drawing.Point(439, 12);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(89, 43);
+            this.btnDelete.Size = new System.Drawing.Size(89, 30);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;

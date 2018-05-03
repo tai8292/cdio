@@ -85,7 +85,6 @@
             this.btnPay.TabIndex = 4;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = true;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnSwitchTable
             // 
@@ -96,7 +95,6 @@
             this.btnSwitchTable.TabIndex = 3;
             this.btnSwitchTable.Text = "Switch Table";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
-            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // lbTotal
             // 
@@ -136,7 +134,7 @@
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            //this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // lbTable
             // 
@@ -222,7 +220,6 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FrmOrder";
             this.Text = "FrmOrder";
-            this.Load += new System.EventHandler(this.FrmOrder_Load);
             this.panelMain.ResumeLayout(false);
             this.panelAction.ResumeLayout(false);
             this.panelAction.PerformLayout();
