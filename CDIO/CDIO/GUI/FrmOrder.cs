@@ -14,9 +14,9 @@ namespace CDIO.GUI
     {
         BL.Menu blMenu;
         DA.DA_Menu daMenu;
-        //private int Hienco;
-        //private string tableID;
-        //private string billID;
+        private int Hienco;
+        private string tableID;
+        private string billID;
         private string employeeID;
         public FrmOrder()
         {
@@ -34,9 +34,8 @@ namespace CDIO.GUI
             daMenu = new DA.DA_Menu();
             this.employeeID = id;
         }
-
-
-        /*public void loadForm()
+        
+        public void loadForm()
         {
             loadDish();
             loadTable();
@@ -50,6 +49,7 @@ namespace CDIO.GUI
             loadDish();
             loadTable();
         }
+        
         //load list table under button
         public void loadTable()
         {
@@ -288,8 +288,7 @@ namespace CDIO.GUI
                 if (name.Equals(listDish[i].DishName))
                     return listDish[i].DishID.ToString();
             return "";
-        }*/
-
+        }
     }
 }
 

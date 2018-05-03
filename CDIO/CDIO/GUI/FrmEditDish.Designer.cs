@@ -79,6 +79,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 2;
@@ -144,6 +145,7 @@
             // 
             this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Location = new System.Drawing.Point(126, 10);
+            this.txtNumber.MaxLength = 5;
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(232, 26);
             this.txtNumber.TabIndex = 2;
@@ -174,6 +176,7 @@
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(126, 10);
+            this.txtPrice.MaxLength = 10;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(232, 26);
             this.txtPrice.TabIndex = 2;
@@ -191,6 +194,7 @@
             // 
             // picture
             // 
+            this.picture.Image = global::CDIO.Properties.Resources.food;
             this.picture.Location = new System.Drawing.Point(126, 10);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(236, 181);
