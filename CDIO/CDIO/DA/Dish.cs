@@ -42,7 +42,7 @@ namespace CDIO.DA
                 kindID = value;
             }
         }
-
+    
         public int DishID
         {
             get
@@ -75,7 +75,7 @@ namespace CDIO.DA
             {
                 return price;
             }
-
+        }
             set
             {
                 price = value;
@@ -105,8 +105,5 @@ namespace CDIO.DA
 
             //this.picture = commen.byteToImage((byte[])row["Picture"]);
         }
-
-
-        
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CDIO.GUI
+﻿/*namespace CDIO.GUI
 {
     partial class FrmOrder
     {
@@ -280,4 +280,4 @@
         private System.Windows.Forms.Button btnDeleteTB;
         private System.Windows.Forms.Button btnAddTB;
     }
-}
+}*/

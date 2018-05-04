@@ -42,6 +42,7 @@ namespace CDIO.GUI
             loadForm();
         }
 
+
         private void btnMenuDish_Click(object sender, EventArgs e)
         {
             FrmMenu f = new FrmMenu();
@@ -87,6 +88,7 @@ namespace CDIO.GUI
         {
             FrmOrder f = new FrmOrder(empID);
             nhungForm(f);
+        }
         }
 
         private void btnBill_Click(object sender, EventArgs e)

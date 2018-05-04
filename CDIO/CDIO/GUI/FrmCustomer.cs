@@ -24,6 +24,11 @@ namespace CDIO.GUI
         {
             FrmAddCustomer frm = new FrmAddCustomer();
             frm.ShowDialog();
+            txtAddress.Clear();
+            txtID.Clear();
+            txtName.Clear();
+            txtPhone.Clear();
+            txtPoint.Clear();
             customer.loadForm();
         }
 
@@ -47,6 +52,11 @@ namespace CDIO.GUI
         {
             FrmEditCustomer frm = new FrmEditCustomer(txtID.Text, txtName.Text,txtAddress.Text,txtPhone.Text,cbType.SelectedValue.ToString(),txtPoint.Text);
             frm.ShowDialog();
+            txtAddress.Clear();
+            txtID.Clear();
+            txtName.Clear();
+            txtPhone.Clear();
+            txtPoint.Clear();
             customer.loadForm();
         }
 
@@ -56,6 +66,11 @@ namespace CDIO.GUI
             {
                 customer.deleteCustomer();
                 customer.loadForm();
+                txtAddress.Clear();
+                txtID.Clear();
+                txtName.Clear();
+                txtPhone.Clear();
+                txtPoint.Clear();
                 btnDelete.Enabled = false;
                 btnEdit.Enabled = false;
                 MessageBox.Show("You have successfully delete a customer !");

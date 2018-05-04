@@ -141,7 +141,7 @@
             this.btnOrder.TabIndex = 0;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            /*this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);*/
             // 
             // panelMain
             // 
@@ -170,7 +170,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
+            /*this.Load += new System.EventHandler(this.FrmMain_Load);*/
             this.panelMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 

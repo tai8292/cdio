@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CDIO.GUI
+/*namespace CDIO.GUI
 {
     public partial class FrmOrder : Form
     {
@@ -304,5 +304,5 @@ namespace CDIO.GUI
             this.loadForm();
         }
     }
-}
+}*/
 

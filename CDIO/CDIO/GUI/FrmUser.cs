@@ -17,6 +17,7 @@ namespace CDIO.GUI
         {
             InitializeComponent();
             user = new BL.User(this);
+            this.dataGridView1.AllowUserToAddRows = false;
         }
 
         private void FrmUser_Load(object sender, EventArgs e)
@@ -26,13 +27,21 @@ namespace CDIO.GUI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            user.clickDataGrid(e.RowIndex);
+            if (e.RowIndex >= 0 && e.RowIndex < this.dataGridView1.Rows.Count)
+            {
+                user.clickDataGrid(e.RowIndex);
+                btnDelete.Enabled = true;
+                btnReset.Enabled = true;
+            }
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             FrmAddUser f = new FrmAddUser();
             f.ShowDialog();
+            txtID.Clear();
+            txtName.Clear();
+            user.loadForm();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -41,6 +50,10 @@ namespace CDIO.GUI
             {
                 user.deleteUser();
                 user.loadForm();
+                txtID.Clear();
+                txtName.Clear();
+                btnDelete.Enabled = false;
+                btnReset.Enabled = false;
                 MessageBox.Show("You deleted successfully!");
             }
         }
@@ -51,6 +64,8 @@ namespace CDIO.GUI
             {
                 user.resetUser();
                 user.loadForm();
+                btnDelete.Enabled = false;
+                btnReset.Enabled = false;
                 MessageBox.Show("You have successfully reset the password, the default password is :123456!");
             }
         }

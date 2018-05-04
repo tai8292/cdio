@@ -35,7 +35,6 @@
             this.txtPoint = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.cbType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddPosition = new System.Windows.Forms.Button();
+            this.cbType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,10 +109,10 @@
             // 
             // txtPoint
             // 
-            this.txtPoint.Enabled = false;
             this.txtPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPoint.Location = new System.Drawing.Point(126, 10);
             this.txtPoint.Name = "txtPoint";
+            this.txtPoint.ReadOnly = true;
             this.txtPoint.Size = new System.Drawing.Size(232, 26);
             this.txtPoint.TabIndex = 2;
             // 
@@ -135,16 +135,6 @@
             this.panel7.Size = new System.Drawing.Size(365, 41);
             this.panel7.TabIndex = 4;
             // 
-            // cbType
-            // 
-            this.cbType.Enabled = false;
-            this.cbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(129, 7);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(232, 28);
-            this.cbType.TabIndex = 3;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -166,10 +156,10 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Enabled = false;
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(129, 10);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
             // 
@@ -194,10 +184,10 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Enabled = false;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(129, 7);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
             // 
@@ -244,10 +234,10 @@
             // 
             // txtName
             // 
-            this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(129, 10);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 2;
             // 
@@ -272,10 +262,10 @@
             // 
             // txtID
             // 
-            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(129, 10);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(232, 26);
             this.txtID.TabIndex = 2;
             // 
@@ -299,6 +289,16 @@
             this.btnAddPosition.Text = "Add customer";
             this.btnAddPosition.UseVisualStyleBackColor = true;
             this.btnAddPosition.Click += new System.EventHandler(this.btnAddPosition_Click);
+            // 
+            // cbType
+            // 
+            this.cbType.Enabled = false;
+            this.cbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(129, 7);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(232, 28);
+            this.cbType.TabIndex = 3;
             // 
             // FrmCustomer
             // 
@@ -347,7 +347,6 @@
         public System.Windows.Forms.TextBox txtPoint;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Panel panel7;
-        public System.Windows.Forms.ComboBox cbType;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.TextBox txtPhone;
@@ -355,6 +354,7 @@
         public System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.TextBox txtAddress;
         public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.ComboBox cbType;
     }
 
 }

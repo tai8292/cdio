@@ -75,12 +75,13 @@
             this.panel1.Location = new System.Drawing.Point(12, 349);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(365, 41);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 4;
             // 
             // txtPoint
             // 
             this.txtPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPoint.Location = new System.Drawing.Point(126, 7);
+            this.txtPoint.MaxLength = 100;
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.Size = new System.Drawing.Size(232, 26);
             this.txtPoint.TabIndex = 2;
@@ -92,7 +93,7 @@
             this.panel2.Location = new System.Drawing.Point(13, 290);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(365, 41);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 3;
             // 
             // cbType
             // 
@@ -127,9 +128,11 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(126, 10);
+            this.txtAddress.MaxLength = 100;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
+            this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
             // label4
             // 
@@ -148,15 +151,17 @@
             this.panel4.Location = new System.Drawing.Point(12, 127);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 41);
-            this.panel4.TabIndex = 1;
+            this.panel4.TabIndex = 0;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 0;
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // label2
             // 
@@ -175,15 +180,17 @@
             this.panel7.Location = new System.Drawing.Point(13, 232);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(365, 41);
-            this.panel7.TabIndex = 3;
+            this.panel7.TabIndex = 2;
             // 
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(126, 10);
+            this.txtPhone.MaxLength = 12;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
+            this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
             // 
             // label5
             // 
@@ -200,7 +207,7 @@
             this.btnCancer.Location = new System.Drawing.Point(291, 412);
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(89, 36);
-            this.btnCancer.TabIndex = 8;
+            this.btnCancer.TabIndex = 7;
             this.btnCancer.Text = "Cancel";
             this.btnCancer.UseVisualStyleBackColor = true;
             this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
@@ -210,7 +217,7 @@
             this.btnClear.Location = new System.Drawing.Point(148, 412);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 36);
-            this.btnClear.TabIndex = 7;
+            this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -220,7 +227,7 @@
             this.btnEdit.Location = new System.Drawing.Point(15, 412);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(89, 36);
-            this.btnEdit.TabIndex = 6;
+            this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnAdd_Click);
@@ -232,7 +239,7 @@
             this.panel6.Location = new System.Drawing.Point(12, 174);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(365, 41);
-            this.panel6.TabIndex = 2;
+            this.panel6.TabIndex = 1;
             // 
             // panel3
             // 
@@ -241,14 +248,14 @@
             this.panel3.Location = new System.Drawing.Point(12, 77);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 41);
-            this.panel3.TabIndex = 0;
+            this.panel3.TabIndex = 3;
             // 
             // txtID
             // 
-            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(126, 10);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(232, 26);
             this.txtID.TabIndex = 0;
             // 
@@ -278,8 +285,8 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel6);
             this.Name = "FrmEditCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Customer";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEditCustomer_FormClosing);
             this.Load += new System.EventHandler(this.FrmEditCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

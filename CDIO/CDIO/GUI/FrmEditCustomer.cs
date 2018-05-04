@@ -19,7 +19,6 @@ namespace CDIO.GUI
         string cusid;
         string point;
         BL.BL_EditCustomer customer;
-
         public FrmEditCustomer()
         {
             InitializeComponent();
@@ -38,12 +37,34 @@ namespace CDIO.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "" && txtPoint.Text!="")
+            if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "" && txtPoint.Text != "")
             {
                 if (txtPhone.Text.All(char.IsDigit) == true && txtPoint.Text.All(char.IsDigit) == true)
                 {
-                    customer.editCustomer();
-                    MessageBox.Show("You have successfully edit a customer !");
+                    if (txtName.Text.Length >= 6)
+                    {
+                        if (txtAddress.Text.Length >= 2)
+                        {
+                            if (txtPhone.Text.Length >= 10)
+                            {
+                                customer.editCustomer();
+                                MessageBox.Show("You have successfully edit a customer !");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Phone must be at least 10 characters long.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Address must be at least 2 characters long.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Name must be at least 6 characters long.");
+                    }
                 }
                 else
                 {
@@ -74,21 +95,33 @@ namespace CDIO.GUI
 
         private void btnCancer_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (DialogResult.Yes == MessageBox.Show("Do you want to Cancel this Form Add Position? ", "Noted", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                this.Close();
         }
-
-        private void FrmEditCustomer_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (DialogResult.No == MessageBox.Show("Do you want to cancel?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-                e.Cancel = true;
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtName.Clear();
             txtAddress.Clear();
             txtPhone.Clear();
             txtPoint.Clear();
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if (txtName.Text.Length < 6)
+                MessageBox.Show("Name must be at least 6 characters long.");
+        }
+
+        private void txtPhone_Leave(object sender, EventArgs e)
+        {
+            if (txtPhone.Text.Length < 10)
+                MessageBox.Show("Phone must be at least 10 characters long.");
+        }
+
+        private void txtAddress_Leave(object sender, EventArgs e)
+        {
+            if (txtAddress.Text.Length < 2)
+                MessageBox.Show("Address must be at least 2 characters long.");
         }
     }
 }

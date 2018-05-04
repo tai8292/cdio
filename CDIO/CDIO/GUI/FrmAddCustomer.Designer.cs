@@ -96,9 +96,11 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(126, 10);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 0;
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // label2
             // 
@@ -123,9 +125,11 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(126, 10);
+            this.txtPhone.MaxLength = 12;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(232, 26);
             this.txtPhone.TabIndex = 2;
+            this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
             // 
             // label5
             // 
@@ -150,9 +154,11 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(126, 10);
+            this.txtAddress.MaxLength = 100;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(232, 26);
             this.txtAddress.TabIndex = 2;
+            this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
             // label4
             // 
@@ -216,6 +222,7 @@
             // 
             this.txtPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPoint.Location = new System.Drawing.Point(126, 7);
+            this.txtPoint.MaxLength = 100;
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.Size = new System.Drawing.Size(232, 26);
             this.txtPoint.TabIndex = 2;
@@ -245,8 +252,8 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel6);
             this.Name = "FrmAddCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Customer";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddCustomer_FormClosing);
             this.Load += new System.EventHandler(this.FrmAddCustomer_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

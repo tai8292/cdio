@@ -1,4 +1,4 @@
-﻿namespace CDIO.GUI
+﻿/*namespace CDIO.GUI
 {
     partial class FrmBill
     {
@@ -58,6 +58,6 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer reportBill;
+        zprivate CrystalDecisions.Windows.Forms.CrystalReportViewer reportBill;
     }
-}
+}*/
