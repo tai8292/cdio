@@ -152,6 +152,12 @@
     <Compile Include="GUI\FrmCustomer.Designer.cs">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmChangePass.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmCustomerType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+   <EmbeddedResource Include="GUI\FrmChangePass.resx">
+      <DependentUpon>FrmChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCustomerType.resx">
       <DependentUpon>FrmCustomerType.cs</DependentUpon>
