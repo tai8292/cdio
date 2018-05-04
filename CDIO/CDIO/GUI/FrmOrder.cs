@@ -34,7 +34,7 @@ using System.Windows.Forms;
             daMenu = new DA.DA_Menu();
             this.employeeID = id;
         }
-
+        
         public void loadForm()
         {
             loadDish();
@@ -49,6 +49,7 @@ using System.Windows.Forms;
             loadDish();
             loadTable();
         }
+        
         //load list table under button
         public void loadTable()
         {
@@ -289,6 +290,19 @@ using System.Windows.Forms;
             return "";
         }
 
+        private void btnAddTB_Click(object sender, EventArgs e)
+        {
+            FrmAddTable frm = new FrmAddTable();
+            frm.ShowDialog();
+            this.loadForm();
+        }
+
+        private void btnDeleteTB_Click(object sender, EventArgs e)
+        {
+            FrmDeleteTable frm = new FrmDeleteTable();
+            frm.ShowDialog();
+            this.loadForm();
+        }
     }
 }*/
 

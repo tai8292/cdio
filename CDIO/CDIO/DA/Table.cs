@@ -13,9 +13,20 @@ namespace CDIO.DA
 
         public Table(DataRow row)
         {
-            id = (string)row[0];
+            Id = (string)row[0];
         }
 
-        /*public string Id { get => id; set => id = value; }*/
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
     }
 }

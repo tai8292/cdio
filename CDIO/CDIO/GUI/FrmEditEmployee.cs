@@ -13,6 +13,7 @@ namespace CDIO.GUI
     public partial class FrmEditEmployee : Form
     {
         BL.BL_EditEmployee employee;
+        BL.Commen commen = new BL.Commen();
         string id;
         string name;
         string gender;
@@ -43,13 +44,21 @@ namespace CDIO.GUI
         {
             if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
             {
-                if (txtPhone.Text.All(char.IsDigit) == true)
+                if (!commen.checkAlphaNumberic(txtName.Text) || !commen.checkAlphaNumberic(txtName.Text) || !commen.checkAlphaNumberic(txtAddress.Text))
                 {
-                    employee.editEmployee();
-                    MessageBox.Show("You have successfully edit an employee !");
+                    MessageBox.Show("Can not contain special character");
                 }
-                else {
-                    MessageBox.Show("Phone must be a number !");
+                else
+                {
+                    if (txtPhone.Text.All(char.IsDigit) == true)
+                    {
+                        employee.editEmployee();
+                        MessageBox.Show("You have successfully edit an employee !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Phone must be a number !");
+                    }
                 }
             }
             else {

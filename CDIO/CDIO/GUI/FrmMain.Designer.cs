@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenuStrip = new System.Windows.Forms.Panel();
+            this.btnBill = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnCustomerType = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.btnMenuDish = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.panelMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +48,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenuStrip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenuStrip.Controls.Add(this.btnChangePass);
+            this.panelMenuStrip.Controls.Add(this.btnBill);
             this.panelMenuStrip.Controls.Add(this.btnUser);
             this.panelMenuStrip.Controls.Add(this.btnCustomerType);
             this.panelMenuStrip.Controls.Add(this.btnCustomer);
@@ -59,9 +63,19 @@
             this.panelMenuStrip.Size = new System.Drawing.Size(1133, 48);
             this.panelMenuStrip.TabIndex = 1;
             // 
+            // btnBill
+            // 
+            this.btnBill.Location = new System.Drawing.Point(879, 6);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(83, 33);
+            this.btnBill.TabIndex = 7;
+            this.btnBill.Text = "Bill";
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(809, 6);
+            this.btnUser.Location = new System.Drawing.Point(773, 6);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(83, 33);
             this.btnUser.TabIndex = 6;
@@ -71,7 +85,7 @@
             // 
             // btnCustomerType
             // 
-            this.btnCustomerType.Location = new System.Drawing.Point(690, 6);
+            this.btnCustomerType.Location = new System.Drawing.Point(654, 6);
             this.btnCustomerType.Name = "btnCustomerType";
             this.btnCustomerType.Size = new System.Drawing.Size(83, 33);
             this.btnCustomerType.TabIndex = 5;
@@ -81,7 +95,7 @@
             // 
             // btnCustomer
             // 
-            this.btnCustomer.Location = new System.Drawing.Point(574, 6);
+            this.btnCustomer.Location = new System.Drawing.Point(538, 6);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(83, 33);
             this.btnCustomer.TabIndex = 4;
@@ -91,7 +105,7 @@
             // 
             // btnPosition
             // 
-            this.btnPosition.Location = new System.Drawing.Point(457, 6);
+            this.btnPosition.Location = new System.Drawing.Point(421, 6);
             this.btnPosition.Name = "btnPosition";
             this.btnPosition.Size = new System.Drawing.Size(83, 33);
             this.btnPosition.TabIndex = 3;
@@ -101,7 +115,7 @@
             // 
             // btnEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(343, 6);
+            this.btnEmployee.Location = new System.Drawing.Point(307, 6);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(83, 33);
             this.btnEmployee.TabIndex = 2;
@@ -111,7 +125,7 @@
             // 
             // btnMenuDish
             // 
-            this.btnMenuDish.Location = new System.Drawing.Point(228, 6);
+            this.btnMenuDish.Location = new System.Drawing.Point(192, 6);
             this.btnMenuDish.Name = "btnMenuDish";
             this.btnMenuDish.Size = new System.Drawing.Size(83, 33);
             this.btnMenuDish.TabIndex = 1;
@@ -121,7 +135,7 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(121, 6);
+            this.btnOrder.Location = new System.Drawing.Point(85, 6);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(83, 33);
             this.btnOrder.TabIndex = 0;
@@ -135,6 +149,16 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1133, 610);
             this.panelMain.TabIndex = 7;
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.Location = new System.Drawing.Point(988, 6);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(83, 33);
+            this.btnChangePass.TabIndex = 8;
+            this.btnChangePass.Text = "Change pass";
+            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // FrmMain
             // 
@@ -163,5 +187,7 @@
         private System.Windows.Forms.Button btnMenuDish;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button btnBill;
+        private System.Windows.Forms.Button btnChangePass;
     }
 }

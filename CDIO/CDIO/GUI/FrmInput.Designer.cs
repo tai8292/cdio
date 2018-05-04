@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtInput = new System.Windows.Forms.NumericUpDown();
             this.btnOkay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtInput = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtInput)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +45,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(270, 90);
             this.panel1.TabIndex = 1;
+            // 
+            // txtInput
+            // 
+            this.txtInput.Location = new System.Drawing.Point(72, 32);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(135, 20);
+            this.txtInput.TabIndex = 3;
+            this.txtInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnOkay
             // 
@@ -65,13 +77,6 @@
             this.label1.Size = new System.Drawing.Size(129, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập số lượng:";
-            // 
-            // txtInput
-            // 
-            this.txtInput.Location = new System.Drawing.Point(72, 32);
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(135, 20);
-            this.txtInput.TabIndex = 3;
             // 
             // FrmInput
             // 

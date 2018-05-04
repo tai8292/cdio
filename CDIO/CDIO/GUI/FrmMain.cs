@@ -37,11 +37,11 @@ namespace CDIO.GUI
             this.panelMain.Show();
         }
 
-        /*private void btnOrder_Click(object sender, EventArgs e)
+        private void btnOrder_Click(object sender, EventArgs e)
         {
-            FrmOrder f = new FrmOrder(empID);
-            nhungForm(f);
-        }*/
+            loadForm();
+        }
+
 
         private void btnMenuDish_Click(object sender, EventArgs e)
         {
@@ -79,10 +79,29 @@ namespace CDIO.GUI
             nhungForm(f);
         }
 
-        /*private void FrmMain_Load(object sender, EventArgs e)
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            loadForm();
+        }
+
+        public void loadForm()
         {
             FrmOrder f = new FrmOrder(empID);
             nhungForm(f);
-        }*/
+        }
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            FrmBillManagement f = new FrmBillManagement();
+            nhungForm(f);
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            FrmChangePass f = new FrmChangePass(empID);
+            f.ShowDialog();
+            this.loadForm();
+        }
     }
 }
