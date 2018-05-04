@@ -156,7 +156,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FrmChangePass.Designer.cs">
-      <DependentUpon>FrmCustomer.cs</DependentUpon>
+      <DependentUpon>FrmChangePass.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmCustomerType.cs">
       <SubType>Form</SubType>
