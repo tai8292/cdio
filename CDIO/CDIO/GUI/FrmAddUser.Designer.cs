@@ -70,10 +70,11 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(145, 7);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(213, 26);
             this.txtName.TabIndex = 0;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // label7
             // 
@@ -157,7 +158,6 @@
             this.Name = "FrmAddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddUser";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddUser_FormClosing);
             this.Load += new System.EventHandler(this.FrmAddUser_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

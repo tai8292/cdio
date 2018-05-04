@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CDIO.GUI {
+/*namespace CDIO.GUI {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -150,4 +150,4 @@ namespace CDIO.GUI {
             return key;
         }
     }
-}
+}*/

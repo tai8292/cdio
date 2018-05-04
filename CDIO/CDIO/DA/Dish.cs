@@ -28,7 +28,7 @@ namespace CDIO.DA
         }
 
 
-        public string DishName { get => dishName; set => dishName = value; }
+        /*public string DishName { get => dishName; set => dishName = value; }
         public string KindID { get => kindID; set => kindID = value; }
         public int Number { get => number; set => number = value; }
         public double Price { get => price; set => price = value; }
@@ -37,6 +37,6 @@ namespace CDIO.DA
         {
             get => dishID; set => dishID = value;
 
-        }
+        }*/
     }
 }
