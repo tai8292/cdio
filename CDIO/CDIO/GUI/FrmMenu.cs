@@ -53,7 +53,7 @@ namespace CDIO.GUI
             if (DialogResult.Yes == MessageBox.Show("Do you want to delete this dish?", "Notice", MessageBoxButtons.YesNo))
             {
                 menu.deleteDish();
-                MessageBox.Show("Delete dish successful");
+                MessageBox.Show("Delete dish successfully");
                 loadForm();
                 clearComponent();
             }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/*namespace CDIO.GUI
+namespace CDIO.GUI
 {
     public partial class FrmOrder : Form
     {
@@ -156,7 +156,7 @@ using System.Windows.Forms;
         {
             if (tableID == null)
             {
-                MessageBox.Show("Vui lòng chọn bàn trước khi đặt món");
+                MessageBox.Show("Please select table first");
             }
             else
             {
@@ -192,7 +192,7 @@ using System.Windows.Forms;
                                 }
                             }
                             if (x > Hienco || sl > Hienco)
-                                MessageBox.Show("So luong khong du,vui long nhap lai");
+                                MessageBox.Show("Not enough,please input again");
                         }
                     }
                 } while (x > Hienco || sl > Hienco);
@@ -304,5 +304,5 @@ using System.Windows.Forms;
             this.loadForm();
         }
     }
-}*/
+}
 
