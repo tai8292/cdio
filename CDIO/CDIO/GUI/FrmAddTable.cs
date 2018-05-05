@@ -38,5 +38,10 @@ namespace CDIO.GUI
                 MessageBox.Show("Table ID must be number!");
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -35,5 +35,10 @@ namespace CDIO.GUI
         {
             table.loadCB();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
