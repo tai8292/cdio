@@ -86,7 +86,6 @@ namespace CDIO.DA
             {
                 return price;
             }
-
             set
             {
                 price = value;

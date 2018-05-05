@@ -316,7 +316,6 @@
             this.Name = "FrmEditEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Employee";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEditEmployee_FormClosing);
             this.Load += new System.EventHandler(this.FrmEditEmployee_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
