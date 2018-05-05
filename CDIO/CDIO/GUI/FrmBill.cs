@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/*namespace CDIO.GUI
+namespace CDIO.GUI
 {
     public partial class FrmBill : Form
     {
@@ -49,4 +49,4 @@ using System.Windows.Forms;
         }
 
     }
-}*/
+}
