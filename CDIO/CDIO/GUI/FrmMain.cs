@@ -89,7 +89,7 @@ namespace CDIO.GUI
             FrmOrder f = new FrmOrder(empID);
             nhungForm(f);
         }
-        }
+        
 
         private void btnBill_Click(object sender, EventArgs e)
         {
