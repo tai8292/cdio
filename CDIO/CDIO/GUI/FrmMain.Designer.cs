@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenuStrip = new System.Windows.Forms.Panel();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnCustomerType = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.btnMenuDish = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnChangePass = new System.Windows.Forms.Button();
             this.panelMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,16 @@
             this.panelMenuStrip.Name = "panelMenuStrip";
             this.panelMenuStrip.Size = new System.Drawing.Size(1133, 48);
             this.panelMenuStrip.TabIndex = 1;
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.Location = new System.Drawing.Point(988, 6);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(83, 33);
+            this.btnChangePass.TabIndex = 8;
+            this.btnChangePass.Text = "Change pass";
+            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // btnBill
             // 
@@ -141,7 +151,7 @@
             this.btnOrder.TabIndex = 0;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
-            /*this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);*/
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
             // 
             // panelMain
             // 
@@ -149,16 +159,6 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1133, 610);
             this.panelMain.TabIndex = 7;
-            // 
-            // btnChangePass
-            // 
-            this.btnChangePass.Location = new System.Drawing.Point(988, 6);
-            this.btnChangePass.Name = "btnChangePass";
-            this.btnChangePass.Size = new System.Drawing.Size(83, 33);
-            this.btnChangePass.TabIndex = 8;
-            this.btnChangePass.Text = "Change pass";
-            this.btnChangePass.UseVisualStyleBackColor = true;
-            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // FrmMain
             // 
@@ -170,7 +170,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
-            /*this.Load += new System.EventHandler(this.FrmMain_Load);*/
+            this.Load += new System.EventHandler(this.FrmMain_Load_1);
             this.panelMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 

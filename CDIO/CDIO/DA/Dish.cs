@@ -17,6 +17,17 @@ namespace CDIO.DA
         Image picture;
         BL.Commen commen = new BL.Commen();
 
+        public Dish(DataRow row)
+        {
+            this.DishID = (int)row[0];
+            this.DishName = (string)row[1];
+            this.KindID = (string)row[2];
+            this.Number = (int)row[3];
+            this.Price = (double)row["p"];
+
+            //this.picture = commen.byteToImage((byte[])row["Picture"]);
+        }
+
         public string DishName
         {
             get
@@ -42,7 +53,7 @@ namespace CDIO.DA
                 kindID = value;
             }
         }
-    
+
         public int DishID
         {
             get
@@ -75,7 +86,6 @@ namespace CDIO.DA
             {
                 return price;
             }
-        
             set
             {
                 price = value;
@@ -93,17 +103,6 @@ namespace CDIO.DA
             {
                 picture = value;
             }
-        }
-
-        public Dish(DataRow row)
-        {
-            this.DishID = (int)row[0];
-            this.DishName = (string)row[1];
-            this.KindID = (string)row[2];
-            this.Number = (int)row[3];
-            this.Price = (double)row["p"];
-
-            //this.picture = commen.byteToImage((byte[])row["Picture"]);
         }
     }
 }

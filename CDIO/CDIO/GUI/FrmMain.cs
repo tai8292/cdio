@@ -24,7 +24,7 @@ namespace CDIO.GUI
             empID = id;
         }
 
-        private void nhungForm(Form  f)
+        private void nhungForm(Form f)
         {
             this.panelMain.Controls.Clear();
             f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -37,10 +37,6 @@ namespace CDIO.GUI
             this.panelMain.Show();
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            loadForm();
-        }
 
 
         private void btnMenuDish_Click(object sender, EventArgs e)
@@ -79,18 +75,12 @@ namespace CDIO.GUI
             nhungForm(f);
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            loadForm();
-        }
-
         public void loadForm()
         {
             FrmOrder f = new FrmOrder(empID);
             nhungForm(f);
         }
         
-
         private void btnBill_Click(object sender, EventArgs e)
         {
             FrmBillManagement f = new FrmBillManagement();
@@ -102,6 +92,16 @@ namespace CDIO.GUI
             FrmChangePass f = new FrmChangePass(empID);
             f.ShowDialog();
             this.loadForm();
+        }
+
+        private void btnOrder_Click_1(object sender, EventArgs e)
+        {
+            loadForm();
+        }
+
+        private void FrmMain_Load_1(object sender, EventArgs e)
+        {
+            loadForm();
         }
     }
 }
