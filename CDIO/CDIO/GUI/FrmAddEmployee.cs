@@ -35,17 +35,29 @@ namespace CDIO.GUI
                 {
                     MessageBox.Show("Can not contain special character");
                 }
-                else {
+                else
+                {
                     if (txtPhone.Text.All(char.IsDigit) == true)
                     {
-                        employee.addEmployee();
-                        MessageBox.Show("You have successfully add a new employee !");
+                        if (txtPhone.Text.All(char.IsDigit) == true)
+                        {
+                            if (txtPhone.Text.Length > 8)
+                            {
+                                employee.addEmployee();
+                                MessageBox.Show("You have successfully add an new employee !");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Phone must be between 9-12 characters");
+                            }
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Phone must be a number !");
                     }
-                }             
+                }
             }
             else
             {
@@ -58,11 +70,7 @@ namespace CDIO.GUI
             this.Close();
         }
 
-        private void FrmAddEmployee_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (DialogResult.No == MessageBox.Show("Do you want to cancel?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-                e.Cancel = true;
-        }
+       
 
         private void btnClear_Click(object sender, EventArgs e)
         {
