@@ -12,7 +12,7 @@ namespace CDIO.DA
     class DataProvider
     {
         SqlConnection conn;
-        string connectString = @"Data Source=TRUNGNGUYEN\SQLEXPRESS;Initial Catalog=RM;Integrated Security=True";
+        string connectString = @"Data Source=DESKTOP-CUKFQLA;Initial Catalog=RM;Integrated Security=True";
 
         public DataProvider()
         {

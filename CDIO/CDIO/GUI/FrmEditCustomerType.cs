@@ -22,7 +22,8 @@ namespace CDIO.GUI
             InitializeComponent();
             bl = new BL.Bl_EditCustomerType(this);
         }
-        public FrmEditCustomerType(string id,string name,string point)
+
+        public FrmEditCustomerType(string id, string name, string point)
         {
             InitializeComponent();
             bl = new BL.Bl_EditCustomerType(this);
@@ -30,17 +31,14 @@ namespace CDIO.GUI
             this.name = name;
             this.Point = point;
         }
-        /*private void FrmEditCusTomerType_Load(object sender, EventArgs e)
-        {
 
-            this.loadForm();
-        }*/
         public void loadform()
         {
             txtID.Text = ID;
             txtName.Text = name;
             txtPoint.Text = Point;
         }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtName.Text == "")
@@ -50,10 +48,10 @@ namespace CDIO.GUI
             else
 
                 if (Regex.IsMatch(txtName.Text, @"[^a-zA-Z0-9 ]+"))
-                {
-                    MessageBox.Show(" Name not has character special");
-                }
-            
+            {
+                MessageBox.Show(" Name not has character special");
+            }
+
             else
             {
                 bl.EditCT();
@@ -67,21 +65,18 @@ namespace CDIO.GUI
             this.loadform();
         }
 
-       
-
         private void btnCancer_Click(object sender, EventArgs e)
         {
-            if(DialogResult.Yes==MessageBox.Show("Do you want close form Edit?","Notification",MessageBoxButtons.YesNo));
+            if (DialogResult.Yes == MessageBox.Show("Do you want close form Edit?", "Notification", MessageBoxButtons.YesNo)) ;
             this.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
+
             txtName.Clear();
             txtPoint.Clear();
         }
-       
-       
+
     }
 }

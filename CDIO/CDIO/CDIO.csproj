@@ -404,6 +404,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="food.png" />
+    <Content Include="GUI\table.png" />
+    <Content Include="GUI\tableinuse.png" />
+    <None Include="Resources\table.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

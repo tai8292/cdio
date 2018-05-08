@@ -82,6 +82,7 @@
             this.Name = "FrmInputCus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmInput";
+            this.Load += new System.EventHandler(this.FrmInputCus_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

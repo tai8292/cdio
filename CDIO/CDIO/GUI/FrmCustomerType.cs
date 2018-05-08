@@ -50,11 +50,9 @@ namespace CDIO.GUI
                 this.txtID.Clear();
                 this.txtName.Clear();
                 this.txtPoint.Clear();
+                LoadForm();
             }
         }
-        
-           
-
 
         private void btnEdit_Click(object sender, EventArgs e)
         {

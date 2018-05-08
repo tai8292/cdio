@@ -53,5 +53,10 @@ namespace CDIO.GUI
             }
             this.Close();
         }
+
+        private void FrmInput_Load(object sender, EventArgs e)
+        {
+            this.txtInput.Focus();
+        }
     }
 }

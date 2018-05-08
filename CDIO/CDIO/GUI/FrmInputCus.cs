@@ -13,7 +13,7 @@ namespace CDIO.GUI
     public partial class FrmInputCus : Form
     {
         DA.DataProvider dp = new DA.DataProvider();
-        public string cusID ="0";
+        public string cusID ="1";
         public FrmInputCus()
         {
             InitializeComponent();
@@ -31,6 +31,11 @@ namespace CDIO.GUI
             {
                 MessageBox.Show("Customer ID not correct");
             }
+        }
+
+        private void FrmInputCus_Load(object sender, EventArgs e)
+        {
+            this.txtInput.Focus();
         }
     }
 }

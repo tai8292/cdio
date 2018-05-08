@@ -65,11 +65,18 @@ namespace CDIO.GUI
                     Width = DrinksWitdh,
                     Height = DrinksHeight
                 };
+                int newSize = 12;
+                btn.Font = new Font(btn.Font.FontFamily, newSize);
                 if (daMenu.getTableBill(item.Id) == 1)
-                    btn.Text = item.Id + Environment.NewLine + "In use";
+                {
+                    btn.Text = item.Id;
+                    btn.Image = global::CDIO.Properties.Resources.table;
+                }
                 else
-                    btn.Text = item.Id + Environment.NewLine + "Empty";
-                //    btn.Image = global::Thefaceless.Properties.Resources.drink_2_icon;
+                {
+                    btn.Text = item.Id;
+                    btn.Image = global::CDIO.Properties.Resources.tableinuse;
+                }
                 btn.ForeColor = Color.Black;
                 //bắt sự kiện click cho các button
                 btn.Click += btn_ClickTable;
@@ -141,8 +148,9 @@ namespace CDIO.GUI
                     Width = DrinksWitdh,
                     Height = DrinksHeight
                 };
+                int newSize = 12;
+                btn.Font = new Font(btn.Font.FontFamily, newSize);
                 btn.Text = item.DishName + Environment.NewLine + "(" + item.Number + ")";
-                //    btn.Image = global::Thefaceless.Properties.Resources.drink_2_icon;
                 btn.ForeColor = Color.Black;
                 //bắt sự kiện click cho các button
                 btn.Click += btn_Click;

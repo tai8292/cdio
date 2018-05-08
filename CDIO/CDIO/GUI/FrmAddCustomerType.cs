@@ -21,8 +21,6 @@ namespace CDIO.GUI
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-
             try
             {
                 if (txtID.Text == "" || txtName.Text == "")
@@ -36,37 +34,26 @@ namespace CDIO.GUI
 
                  if (Regex.IsMatch(txtID.Text, @"[^a-zA-Z0-9 ]+"))
                 {
-
-
-
                     if (DialogResult.Yes == MessageBox.Show(" ID or Name not has character special")) ;
                 }
-                else 
+                else
                     if (Regex.IsMatch(txtName.Text, @"[^a-zA-Z0-9 ]+"))
-                    {
-                        if (DialogResult.Yes == MessageBox.Show(" ID or Name not has character special")) ;
-                    }
-                    
-                    else
-                    {
-                        bl.AddCT();
-                        MessageBox.Show("add successful");
-                        this.Close();
-                    }
-                
+                {
+                    if (DialogResult.Yes == MessageBox.Show(" ID or Name not has character special")) ;
+                }
+
+                else
+                {
+                    bl.AddCT();
+                    MessageBox.Show("add successful");
+                    this.Close();
+                }
+
             }
-
-
-
-
-
-
-
             catch (Exception)
             {
                 MessageBox.Show("Add Customer Type failed");
             }
-            
         }
         private void btnCancer_Click(object sender, EventArgs e)
         {
@@ -79,9 +66,31 @@ namespace CDIO.GUI
             txtName.Clear();
             txtPoint.Clear();
         }
-    
+        private void txtID_Validated(object sender, EventArgs e)
+        {
+            if (txtID.Text == "")//ID bị bỏ trống
+            {
+                MessageBox.Show("ID not null");
+            }
+            if (Regex.IsMatch(txtID.Text, @"[^a-zA-Z0-9 ]+"))//ID có các kí tự đặc biệt
+            {
+                MessageBox.Show("Not enter special characters ");
+            }
+            return;
+        }
 
-     
+        private void txtName_Validated(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")//Name bị bỏ trống
+            {
+                MessageBox.Show("Name not null");
+            }
+            if (Regex.IsMatch(txtName.Text, @"[^a-zA-Z0-9 ]+"))//Name có các kí tự đặc biệt
+            {
+                MessageBox.Show("Not enter special characters ");
+            }
+            return;
+        }
 
         
     } }
