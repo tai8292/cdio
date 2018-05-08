@@ -30,6 +30,11 @@ namespace CDIO.GUI
             this.name = name;
             this.Point = point;
         }
+        /*private void FrmEditCusTomerType_Load(object sender, EventArgs e)
+        {
+
+            this.loadForm();
+        }*/
         public void loadform()
         {
             txtID.Text = ID;
@@ -43,9 +48,16 @@ namespace CDIO.GUI
                 MessageBox.Show("Name is must not null");
             }
             else
+
+                if (Regex.IsMatch(txtName.Text, @"[^a-zA-Z0-9 ]+"))
+                {
+                    MessageBox.Show(" Name not has character special");
+                }
+            
+            else
             {
                 bl.EditCT();
-                MessageBox.Show("Edit sucessfull");
+                MessageBox.Show("Edit successful");
                 this.Close();
             }
         }
@@ -55,18 +67,12 @@ namespace CDIO.GUI
             this.loadform();
         }
 
-        private void txtName_Validated(object sender, EventArgs e)
-        {
-            if (Regex.IsMatch(txtName.Text, @"[^a-zA-Z0-9 ]+"))//Name có các kí tự đặc biệt
-            {
-                MessageBox.Show("Not enter special characters ");
-            }
-            return;
-        }
+       
 
         private void btnCancer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do you want close form Edit","Notification",MessageBoxButtons.YesNo);
+            if(DialogResult.Yes==MessageBox.Show("Do you want close form Edit?","Notification",MessageBoxButtons.YesNo));
+            this.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -75,5 +81,7 @@ namespace CDIO.GUI
             txtName.Clear();
             txtPoint.Clear();
         }
+       
+       
     }
 }

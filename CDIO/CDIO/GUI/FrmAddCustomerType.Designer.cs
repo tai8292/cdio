@@ -63,7 +63,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(232, 26);
             this.txtID.TabIndex = 0;
-            this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
+           // this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
             // 
             // label1
             // 
@@ -159,7 +159,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(232, 26);
             this.txtName.TabIndex = 3;
-            this.txtName.Validated += new System.EventHandler(this.txtName_Validated);
+            //this.txtName.Validated += new System.EventHandler(this.txtName_Validated);
             // 
             // label3
             // 

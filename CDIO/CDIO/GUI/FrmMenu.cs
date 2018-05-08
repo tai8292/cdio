@@ -73,7 +73,7 @@ namespace CDIO.GUI
             this.txtName.Clear();
             this.txtNumber.Clear();
             this.txtPrice.Clear();
-            this.picture.Image = Image.FromFile("D:/projectCDIO/projectCDIO/cdio/CDIO/CDIO/food.png");
+            this.picture.Image = Image.FromFile("D:/cdio4/cdio/CDIO/CDIO/food.png");
         }
     }
 }

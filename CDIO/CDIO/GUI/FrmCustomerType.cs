@@ -60,6 +60,7 @@ namespace CDIO.GUI
         {
             FrmEditCustomerType frm = new FrmEditCustomerType(txtID.Text,txtName.Text,txtPoint.Text);
             frm.ShowDialog();
+            LoadForm();
         }
     }
 }

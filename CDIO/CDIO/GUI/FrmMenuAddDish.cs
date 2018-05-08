@@ -18,7 +18,7 @@ namespace CDIO.GUI
         {
             InitializeComponent();
             bl = new BL.BL_AddDish(this);
-            this.picture.Image = Image.FromFile("D:/projectCDIO/cdio/CDIO/CDIO/food.png");
+            this.picture.Image = Image.FromFile("D:/cdio4/cdio/CDIO/CDIO/food.png");
         }
 
         private void FrmMenuAddDish_Load(object sender, EventArgs e)
