@@ -44,32 +44,25 @@ namespace CDIO.GUI
         {
             if (txtName.Text != "" && txtAddress.Text != "" && txtPhone.Text != "")
             {
-                if (!commen.checkAlphaNumberic(txtName.Text) || !commen.checkAlphaNumberic(txtName.Text) || !commen.checkAlphaNumberic(txtAddress.Text))
-                {
-                    MessageBox.Show("Can not contain special character");
-                }
-                else
+                if (txtPhone.Text.All(char.IsDigit) == true)
                 {
                     if (txtPhone.Text.All(char.IsDigit) == true)
                     {
-                        if (txtPhone.Text.All(char.IsDigit) == true)
+                        if (txtPhone.Text.Length > 8)
                         {
-                            if (txtPhone.Text.Length > 8)
-                            {
-                                employee.editEmployee();
-                                MessageBox.Show("You have successfully edit an employee !");
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Phone must be between 9-12 characters");
-                            }
+                            employee.editEmployee();
+                            MessageBox.Show("You have successfully edit an employee !");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Phone must be between 9-12 characters");
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Phone must be a number !");
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Phone must be a number !");
                 }
             }
             else

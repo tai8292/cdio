@@ -39,9 +39,9 @@ namespace CDIO.GUI
                     MessageBox.Show("NAME can not contain special character");
                 }
                 else
-                if (txtName.Text.Length < 6)
+                if (txtName.Text.Length < 2)
                 {
-                    MessageBox.Show("Name must be at least 6 characters long.");
+                    MessageBox.Show("Name must be at least 2 characters long.");
                 }
                 else
                 {
@@ -69,8 +69,8 @@ namespace CDIO.GUI
         
         private void txtName_Leave(object sender, EventArgs e)
         {
-            if (txtName.Text.Length < 6)
-                MessageBox.Show("Name must be at least 6 characters long.");
+            if (txtName.Text.Length < 2)
+                MessageBox.Show("Name must be at least 2 characters long.");
         }
         
     }

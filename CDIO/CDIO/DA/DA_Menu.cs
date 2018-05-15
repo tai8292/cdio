@@ -177,8 +177,8 @@ namespace CDIO.DA
 
             string sql = "update BILL set EmployeeID =" + empId + ",CustomerID =" + cusID + ",TotalMoney ='" + total + "' where ID like '" + billID + "'";
             dp.ExcuNonQuery(sql);
-
-            sql = "update CUSTOMER set Point = Point +'" + total / 10000 + "' where CustomerID =" + cusID;
+            decimal p =Math.Round((decimal)( total / 10000));
+            sql = "update CUSTOMER set Point = Point +'" + p + "' where CustomerID =" + cusID;
             dp.ExcuNonQuery(sql);
         }
 

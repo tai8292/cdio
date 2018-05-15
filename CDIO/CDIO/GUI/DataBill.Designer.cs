@@ -4314,7 +4314,7 @@ SELECT CustomerID, CustomerName, Address, Phone, CusID, Point FROM CUSTOMER WHER
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CustomerID, CustomerName, Address, Phone, CusID, Point FROM dbo.CUSTOMER w" +
-                "here CustomerID = @cusID";
+                "here CustomerID like @cusID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CustomerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

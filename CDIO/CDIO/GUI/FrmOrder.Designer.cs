@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnDeleteTB = new System.Windows.Forms.Button();
+            this.btnAddTB = new System.Windows.Forms.Button();
             this.panelAction = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnSwitchTable = new System.Windows.Forms.Button();
@@ -47,8 +49,6 @@
             this.flowDish = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTable = new System.Windows.Forms.Panel();
             this.flowTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnDeleteTB = new System.Windows.Forms.Button();
-            this.btnAddTB = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             this.panelAction.SuspendLayout();
             this.panelDish.SuspendLayout();
@@ -68,6 +68,26 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1087, 571);
             this.panelMain.TabIndex = 1;
+            // 
+            // btnDeleteTB
+            // 
+            this.btnDeleteTB.Location = new System.Drawing.Point(957, 3);
+            this.btnDeleteTB.Name = "btnDeleteTB";
+            this.btnDeleteTB.Size = new System.Drawing.Size(124, 34);
+            this.btnDeleteTB.TabIndex = 4;
+            this.btnDeleteTB.Text = "Delete Table";
+            this.btnDeleteTB.UseVisualStyleBackColor = true;
+            this.btnDeleteTB.Click += new System.EventHandler(this.btnDeleteTB_Click);
+            // 
+            // btnAddTB
+            // 
+            this.btnAddTB.Location = new System.Drawing.Point(826, 3);
+            this.btnAddTB.Name = "btnAddTB";
+            this.btnAddTB.Size = new System.Drawing.Size(125, 34);
+            this.btnAddTB.TabIndex = 5;
+            this.btnAddTB.Text = "Add Table";
+            this.btnAddTB.UseVisualStyleBackColor = true;
+            this.btnAddTB.Click += new System.EventHandler(this.btnAddTB_Click);
             // 
             // panelAction
             // 
@@ -161,7 +181,7 @@
             this.Total});
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(3, 45);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(250, 407);
@@ -197,6 +217,7 @@
             // 
             // flowDish
             // 
+            this.flowDish.AutoScroll = true;
             this.flowDish.Location = new System.Drawing.Point(3, 3);
             this.flowDish.Name = "flowDish";
             this.flowDish.Size = new System.Drawing.Size(813, 276);
@@ -213,30 +234,11 @@
             // 
             // flowTable
             // 
+            this.flowTable.AutoScroll = true;
             this.flowTable.Location = new System.Drawing.Point(3, 3);
             this.flowTable.Name = "flowTable";
             this.flowTable.Size = new System.Drawing.Size(813, 270);
             this.flowTable.TabIndex = 0;
-            // 
-            // btnDeleteTB
-            // 
-            this.btnDeleteTB.Location = new System.Drawing.Point(957, 3);
-            this.btnDeleteTB.Name = "btnDeleteTB";
-            this.btnDeleteTB.Size = new System.Drawing.Size(124, 34);
-            this.btnDeleteTB.TabIndex = 4;
-            this.btnDeleteTB.Text = "Delete Table";
-            this.btnDeleteTB.UseVisualStyleBackColor = true;
-            this.btnDeleteTB.Click += new System.EventHandler(this.btnDeleteTB_Click);
-            // 
-            // btnAddTB
-            // 
-            this.btnAddTB.Location = new System.Drawing.Point(826, 3);
-            this.btnAddTB.Name = "btnAddTB";
-            this.btnAddTB.Size = new System.Drawing.Size(125, 34);
-            this.btnAddTB.TabIndex = 5;
-            this.btnAddTB.Text = "Add Table";
-            this.btnAddTB.UseVisualStyleBackColor = true;
-            this.btnAddTB.Click += new System.EventHandler(this.btnAddTB_Click);
             // 
             // FrmOrder
             // 

@@ -62,7 +62,7 @@
             this.btnCancer.Location = new System.Drawing.Point(288, 493);
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(89, 36);
-            this.btnCancer.TabIndex = 17;
+            this.btnCancer.TabIndex = 6;
             this.btnCancer.Text = "Cancel";
             this.btnCancer.UseVisualStyleBackColor = true;
             this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
@@ -72,7 +72,7 @@
             this.btnClear.Location = new System.Drawing.Point(147, 493);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 36);
-            this.btnClear.TabIndex = 16;
+            this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -82,7 +82,7 @@
             this.btnSave.Location = new System.Drawing.Point(12, 493);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(89, 36);
-            this.btnSave.TabIndex = 15;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -94,7 +94,7 @@
             this.panel5.Location = new System.Drawing.Point(12, 98);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(365, 41);
-            this.panel5.TabIndex = 13;
+            this.panel5.TabIndex = 1;
             // 
             // txtKind
             // 
@@ -122,7 +122,7 @@
             this.panel4.Location = new System.Drawing.Point(12, 51);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 41);
-            this.panel4.TabIndex = 14;
+            this.panel4.TabIndex = 0;
             // 
             // txtName
             // 
@@ -185,7 +185,7 @@
             this.panel6.Location = new System.Drawing.Point(12, 145);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(365, 41);
-            this.panel6.TabIndex = 12;
+            this.panel6.TabIndex = 2;
             // 
             // label5
             // 
@@ -215,7 +215,7 @@
             this.panel7.Location = new System.Drawing.Point(12, 192);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(365, 41);
-            this.panel7.TabIndex = 11;
+            this.panel7.TabIndex = 3;
             // 
             // label6
             // 
@@ -243,7 +243,7 @@
             this.btnChoose.Location = new System.Drawing.Point(12, 75);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(89, 36);
-            this.btnChoose.TabIndex = 19;
+            this.btnChoose.TabIndex = 0;
             this.btnChoose.Text = "Choose";
             this.btnChoose.UseVisualStyleBackColor = true;
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);

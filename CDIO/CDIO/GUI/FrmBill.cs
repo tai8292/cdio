@@ -40,8 +40,8 @@ namespace CDIO.GUI
             dish.Fill(data.DISH);
             bill.Fill(data.BILL, int.Parse(this.billID));          
             billDetail.Fill(data.BILLDETAIL, int.Parse(this.billID));        
-            cus.Fill(data.CUSTOMER, Int32.Parse(this.cusID));
-            emp.Fill(data.EMPLOYEE, Int32.Parse(this.empID));
+            cus.Fill(data.CUSTOMER, int.Parse(this.cusID));
+            emp.Fill(data.EMPLOYEE, int.Parse(this.empID));
             rpBill r = new rpBill();
             //đưa dữ liệu từ databill và CystalReport
             r.SetDataSource(data);

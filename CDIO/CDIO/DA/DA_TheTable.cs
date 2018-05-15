@@ -18,7 +18,7 @@ namespace CDIO.DA
             }
             else
             {
-                sql = "insert into THETABLE values('" + id + "')";
+                sql = "insert into THETABLE(TableID) values('" + id + "')";
                 dp.ExcuNonQuery(sql);
                 return 1;
             }

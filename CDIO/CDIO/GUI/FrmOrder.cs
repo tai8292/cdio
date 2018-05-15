@@ -260,12 +260,14 @@ namespace CDIO.GUI
             {
                 this.listView1.Items.Clear();
                 this.lbTotal.Text = "0";
-                daMenu.updateBill(billID, 1, 1);
-                daMenu.deleteTableBill(billID);
                 FrmInputCus fc = new FrmInputCus();
                 fc.ShowDialog();
+                daMenu.updateBill(billID,int.Parse(fc.cusID), int.Parse(employeeID));
+                daMenu.deleteTableBill(billID);
                 FrmBill f = new FrmBill(billID, fc.cusID, employeeID);
                 f.ShowDialog();
+                loadDish();
+                loadTable();
             }
         }
 
